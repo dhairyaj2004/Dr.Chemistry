@@ -1,0 +1,45 @@
+{
+  "chemistryFields": [
+    {
+      "id": 1,
+      "name": "Inorganic Chemistry",
+      "description": "The study of inorganic compounds and materials, including metals, minerals, and organometallic compounds.",
+      "imageUrl": "https://t4.ftcdn.net/jpg/05/75/38/09/360_F_575380986_zl6fgghJ9NHNIXlMBVUeadJTY2uBtRpo.jpg",
+      "pageUrl": "/Inorganic Chemistry",
+      "isFeatured":true
+    },
+    {
+      "id": 2,
+      "name": "Organic Chemistry",
+      "description": "The study of carbon-containing compounds and their reactions.",
+      "imageUrl": "https://t4.ftcdn.net/jpg/01/41/20/41/360_F_141204155_2XIe4qkX1SK4waITeqAB0dNxgziZAeU2.jpg",
+      "pageUrl": "/Organic Chemistry",
+      "isFeatured":true
+    },
+    {
+      "id": 3,
+      "name": "Physical Chemistry",
+      "description": "The study of the physical properties and behaviors of chemical systems.",
+      "imageUrl": "/images/physical-chemistry.jpg",
+      "pageUrl": "/Physical Chemistry",
+      "isFeatured":false
+    },
+    {
+      "id": 4,
+      "name": "BioChemistry",
+      "description": "The study of the chemical processes and substances that occur within living organisms.",
+      "imageUrl": "https://images.newscientist.com/wp-content/uploads/2019/10/22153920/biochemistry-shutterstock_187967735_web.jpg",
+      "pageUrl": "/BioChemistry",
+      "isFeatured":true
+    },
+    {
+      "id": 5,
+      "name": "Analytical Chemistry",
+      "description": "The study of the chemical processes and substances that occur within living organisms.",
+      "imageUrl": "/images/biochemistry.jpg",
+      "pageUrl": "/Analytical Chemistry",
+      "isFeatured":false
+    }
+    
+  ]
+}
