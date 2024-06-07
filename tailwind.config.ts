@@ -11,6 +11,10 @@ const config: Config = {
 darkMode:'class',
   theme: {
     extend:{
+      screens: {
+        'custom': {'min': '768px', 'max': '1027px'},
+      },
+
     animation: {
       spotlight: "spotlight 2s ease .75s 1 forwards",
     },
