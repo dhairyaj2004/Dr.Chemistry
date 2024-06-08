@@ -19,7 +19,7 @@ function footer() {
         </div>
         
         </div>
-        <p className="text-center text-gray-300 text-sm pt-8"> Copyrights Dr. Chemistry. All rights reserved.</p>
+        <p className="text-center text-gray-300 text-sm pt-8"> Copyrights © Dr. Chemistry. All rights reserved.</p>
     </footer>
   )
 }

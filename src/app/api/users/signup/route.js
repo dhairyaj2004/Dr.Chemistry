@@ -1,4 +1,4 @@
-import { request } from "http";
+import request from 'http';
 import connection from "../../../../dbConnection/dbConnection";
 import User from "../../../../models/loginModel";
 import { NextRequest, NextResponse} from "next/server";
