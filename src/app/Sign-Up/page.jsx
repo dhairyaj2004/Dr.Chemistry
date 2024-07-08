@@ -1,29 +1,57 @@
 "use client"
 import {useState} from 'react'
-
+import {useRouter} from 'next/navigation'
 function page() {
-  const form = document.getElementById('signupForm')
-  const [email,setEmail]=useState("");
-  const [username,setUsername]=useState("");
-  const [password,setPassword]=useState("");
-  const [error,setError]=useState("");
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+const router=useRouter();
   const submitClick = async (e) => {
     e.preventDefault();
-    
-    try {
-      const res = await fetch('/api/users/signup', {
-        method: 'POST',
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, username, password })
-      });
-  
-      if (res.ok) {
-        form.reset();
-      } 
-    } catch (error) {
-      console.error('Request failed:', error);
+    setError(""); // Clear any previous error messages
+
+
+    if (!username || !email || !password) {
+      setError("Please fill all the fields");
+      return;
     }
-    
+
+    try {
+      const resUserExist = await fetch("/api/users/userExist", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const { user } = await resUserExist.json();
+      if (user) {
+        setError("User already exists");
+        return; // Exit the function if user exists
+      }
+
+      const res = await fetch("/api/users/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, username, password }),
+      });
+
+      if (res.ok) {
+        setEmail("");
+        setUsername("");
+        setPassword("");
+        router.push("/Login") 
+      } else {
+        const errorData = await res.json();
+        setError(errorData.error || "Signup failed");
+      }
+    } catch (error) {
+      console.error("Request failed:", error);
+      setError("An unexpected error occurred");
+    }
   };
   
   return (
@@ -60,6 +88,7 @@ function page() {
         { error &&
          <div className='text-red-600 text-center'>
           {error}
+         
         </div>
       }
         <p className="text-sm font-light text-gray-500 dark:text-gray-400">Already have an account? <a

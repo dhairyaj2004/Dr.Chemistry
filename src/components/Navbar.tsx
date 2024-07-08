@@ -6,11 +6,12 @@ import Link from "next/link";
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
+  
   return (
     
       <div
         className={cn(
-          "fixed flex font-semibold font-serif -top-0.5 inset-x-0 max-w-full md:max-w-full mx-auto z-50 justify-center md:justify-end  bg-gradient-to-r from-blue-300 to-slate-900  text-xl rounded-lg shadow-xl ",
+          "fixed flex font-semibold font-serif -top-0.5 inset-x-0 max-w-full md:max-w-full mx-auto z-50 justify-center md:justify-end   bg-gradient-to-r from-transparent to-gray-900  text-xl rounded-lg shadow-xl ",
         )}
       >
         <Menu setActive={setActive}>
