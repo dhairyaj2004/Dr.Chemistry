@@ -1,9 +1,18 @@
-import React from 'react'
-
-function page() {
+"use client"
+import { signOut } from 'next-auth/react'
+import ProtectedRoute from '../../components/ProtectedRoute'
+const Dashboard = () => {
+  const handleLogout=async ()=>{
+    await signOut({ callbackUrl: '/Login' });
+  }
   return (
-    <div>page</div>
+    <ProtectedRoute>
+      <div className='py-10'>
+        <h1>Dashboard</h1>
+        <button onClick={handleLogout}>Logout</button>
+      </div>
+    </ProtectedRoute>
   )
 }
 
-export default page
+export default Dashboard

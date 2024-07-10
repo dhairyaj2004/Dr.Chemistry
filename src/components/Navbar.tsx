@@ -11,7 +11,7 @@ function Navbar({ className }: { className?: string }) {
     
       <div
         className={cn(
-          "fixed flex font-semibold font-serif -top-0.5 inset-x-0 max-w-full md:max-w-full mx-auto z-50 justify-center md:justify-end   bg-gradient-to-r from-transparent to-gray-900  text-xl rounded-lg shadow-xl ",
+          "fixed flex font-semibold font-serif -top-0.5 inset-x-0 max-w-full md:max-w-full mx-auto z-50 justify-center md:justify-end   bg-gradient-to-r from-transparent to-gray-900  text-xl  shadow-2xl ",
         )}
       >
         <Menu setActive={setActive}>

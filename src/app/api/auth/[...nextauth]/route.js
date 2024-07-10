@@ -16,13 +16,9 @@ const authOptions = {
       async authorize(credentials) {
         try {
           await connection();
-          
           const user = await User.findOne({ email: credentials.email });
-          
           if (user) {
             const isValid = await bcryptjs.compare(credentials.password, user.password);
-            console.log('Is Valid Password:', isValid);
-            
             if (isValid) {
               return { id: user._id, name: user.username, email: user.email };
             } else {
@@ -49,9 +45,7 @@ const authOptions = {
       if (account.provider === 'google') {
         try {
           await connection();
-          console.log('Google Sign-in Profile:', profile.email);
           let user = await User.findOne({ email: profile.email });
-          
           if (!user) {
             user = await User.create({
               email: profile.email,
@@ -59,11 +53,9 @@ const authOptions = {
               createdAt: new Date(),
             });
           } else if (user.provider !== 'google') {
-            // Handle case where user exists but used different provider
             console.log('User exists with different provider');
-            // You might want to merge accounts or handle this case differently
+            // Handle differently if needed
           }
-          
           return true;
         } catch (error) {
           console.error('Error in Google sign-in:', error);
@@ -72,13 +64,23 @@ const authOptions = {
       }
       return true;
     },
+    async jwt({ token, user }) {
+      if (user) {
+        token.user = user;
+      }
+      return token;
+    },
+    async session({ session, token }) {
+      session.user = token.user;
+      return session;
+    },
   },
   session: {
     strategy: 'jwt',
   },
-  secret: process.env.NextAuth_SECRET,
+  secret: process.env.NEXTAUTH_SECRET,
   pages: {
-    signIn: '/Login',
+    signIn: '/login',
   },
 };
 
