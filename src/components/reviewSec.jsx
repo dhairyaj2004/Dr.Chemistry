@@ -13,7 +13,7 @@ function reviewSec() {
                     <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"></span>
                     <div className="relative h-full p-5 bg-white border-2 border-indigo-500 rounded-lg">
                         <div className="flex items-center -mt-1">
-                        <img src="https://www.shutterstock.com/image-photo/passport-photo-cute-well-dressed-260nw-1816206689.jpg" alt="Profile Photo" className="w-14 h-14 rounded-full" />
+                        <img src="https://img.freepik.com/premium-photo/young-man-is-holding-book-smiling_905085-17.jpg" alt="Profile Photo" className="w-14 h-14 rounded-full" />
                             <h3 className="my-2 ml-3 text-xl font-bold text-gray-800">Aarav Sharma</h3>
                         </div>
                         <p className="my-2 ml-3 text-md font-bold text-indigo-500 uppercase">98% in H.S.C. Board</p>
@@ -26,7 +26,7 @@ function reviewSec() {
                     <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"></span>
                     <div className="relative h-full p-5 bg-white border-2 border-indigo-500 rounded-lg">
                         <div className="flex items-center -mt-1">
-                        <img src="https://www.shutterstock.com/image-photo/passport-photo-portrait-asian-smiling-260nw-1041841363.jpg" alt="Profile Photo" className="w-14 h-14 rounded-full" />
+                        <img src="https://cdn.pixabay.com/photo/2024/02/12/17/23/ai-generated-8569065_1280.jpg" alt="Profile Photo" className="w-14 h-14 rounded-full" />
                             <h3 className="my-2 ml-3 text-xl font-bold text-gray-800">Diya Patel</h3>
                         </div>
                         <p className="my-2 ml-3 text-md font-bold text-indigo-500 uppercase">95% in H.S.C. Board</p>
@@ -41,8 +41,8 @@ function reviewSec() {
                     <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"></span>
                     <div className="relative h-full p-5 bg-white border-2 border-indigo-500 rounded-lg">
                         <div className="flex items-center -mt-1">
-                        <img src="https://www.shutterstock.com/image-photo/passport-photo-cute-well-dressed-260nw-1816206689.jpg" alt="Profile Photo" className="w-14 h-14 rounded-full" />
-                            <h3 className="my-2 ml-3 text-xl font-bold text-gray-800">Gurucharan Singh</h3>
+                        <img src="https://img.freepik.com/premium-photo/image-25-year-old-indian-man-that-is-smiling-camera_878783-7217.jpg" alt="Profile Photo" className="w-14 h-14 rounded-full" />
+                            <h3 className="my-2 ml-3 text-xl font-bold text-gray-800">Gurkeerat Singh</h3>
                         </div>
                         <p className="my-2 ml-3 text-md font-bold text-indigo-500 uppercase">92% in H.S.C. Board</p>
                         <p className="mb-2 text-gray-600">Effective teaching techniques keep classes interactive and interesting. Study materials are well-curated and enhance learning. Teachers are supportive, approachable, and go the extra mile to help students succeed.</p>
@@ -54,7 +54,7 @@ function reviewSec() {
                     <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"></span>
                     <div className="relative h-full p-5 bg-white border-2 border-indigo-500 rounded-lg">
                         <div className="flex items-center -mt-1">
-                        <img src="https://www.shutterstock.com/image-photo/passport-photo-cute-well-dressed-260nw-1816206689.jpg" alt="Profile Photo" className="w-14 h-14 rounded-full" />
+                        <img src="https://img.freepik.com/premium-photo/young-man_948023-1221.jpg" alt="Profile Photo" className="w-14 h-14 rounded-full" />
                             <h3 className="my-2 ml-3 text-xl font-bold text-gray-800">Vihaan Gupta</h3>
                         </div>
                         <p className="my-2 ml-3 text-md font-bold text-indigo-500 uppercase">91% in H.S.C. Board</p>
@@ -67,8 +67,8 @@ function reviewSec() {
                     <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"></span>
                     <div className="relative h-full p-5 bg-white border-2 border-indigo-500 rounded-lg">
                         <div className="flex items-center -mt-1">
-                        <img src="https://www.shutterstock.com/image-photo/passport-photo-cute-well-dressed-260nw-1816206689.jpg" alt="Profile Photo" className="w-14 h-14 rounded-full" />
-                            <h3 className="my-2 ml-3 text-xl font-bold text-gray-800">Nitish Reddy</h3>
+                        <img src="https://img.freepik.com/premium-photo/young-indian-college-girl-smiling_54391-7128.jpg" alt="Profile Photo" className="w-14 h-14 rounded-full" />
+                            <h3 className="my-2 ml-3 text-xl font-bold text-gray-800">Nitya Joshi</h3>
                         </div>
                         <p className="my-2 ml-3 text-md font-bold text-indigo-500 uppercase">90% in H.S.C. Board</p>
                         <p className="mb-2 text-gray-600">Dynamic teaching approach fosters active learning. Study materials are comprehensive and reinforce concepts effectively. Teachers offer exceptional support, responding promptly to queries and fostering a conducive learning environment.</p>
