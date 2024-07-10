@@ -36,7 +36,7 @@ function mainsec() {
         fill="white"
       />
       <div className="py-10 mt-10 flex flex-col z-10 align-middle justify-center items-center h-screen">
-        <div className=" mt-7 sm:mt-10 md:mt-20 md:text-7xl  sm:text-6xl text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+        <div className=" mt-7 sm:mt-10 md:mt-20 md:text-7xl  sm:text-6xl text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
           <span className="font-serif" style={{ color: "red" }}>Dr. </span>
           <span className="font-serif" style={{ color: "white" }}>Chemistry</span>
         </div>

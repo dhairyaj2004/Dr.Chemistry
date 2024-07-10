@@ -14,8 +14,13 @@ function EndSec() {
           <div>
             <h1>Dr. Jayesh Shah</h1>
             <p className="text-xl md:text-4xl">(B.Sc., B.Ed., M.Sc., M.Ed., Ph.D.)</p>
-          </div>
+          </div>  
         </div>
+      <h2 className="uppercase font-serif font-extrabold text-center">
+    <span className="text-red-500">
+      Login
+    </span> to access exclusive resources.
+  </h2>
       </div>
       <BackgroundBeams />
     </div>
