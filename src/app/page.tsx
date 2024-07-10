@@ -1,3 +1,4 @@
+
 import Mainsec from "@/components/mainsec"
 import Mainsec2 from "@/components/mainsec2"
 import WhyChooseUs from "@/components/whyChooseUs";
@@ -7,6 +8,7 @@ import Footer from "@/components/footer";
 export default function Home() {
   return (
     <>
+
     <Mainsec/>
     <Mainsec2/>
     <WhyChooseUs/>

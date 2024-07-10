@@ -17,17 +17,20 @@ function Navbar({ className }: { className?: string }) {
         <Menu setActive={setActive}>
           <Link href={"/"}>
             <MenuItem setActive={setActive} active={active} item="Home">
-              <div className="flex flex-col space-y-4 text-lg">
-                
+              <div className="hidden md:flex flex-col space-y-4 text-sm md:text-lg lg:text-lg">
                 <HoveredLink href="/Images">Fascinating Photos</HoveredLink>
                 <HoveredLink href="/Videos">Engaging Videos</HoveredLink>
               </div>
+              <div className="flex flex-col space-y-4 text-sm md:hidden">
+    <HoveredLink href="/Images">Insightful</HoveredLink>
+    <HoveredLink href="/Videos">Engaging</HoveredLink>
+  </div>
             </MenuItem>
           </Link>
         </Menu>
         <Menu setActive={setActive}>
           <MenuItem setActive={setActive} active={active} item="Fields">
-            <div className="flex flex-col space-y-4 text-lg">
+            <div className="flex flex-col space-y-4 text-sm md:text-lg lg:text-lg">
               <HoveredLink href="/Organic">
                 Organic Chemistry
               </HoveredLink>

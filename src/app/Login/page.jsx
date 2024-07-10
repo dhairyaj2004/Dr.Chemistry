@@ -55,7 +55,7 @@ function Page() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center">
+    <div className="flex min-h-screen mt-10 items-center justify-center">
       <div className="w-96 rounded-lg shadow-lg p-5 bg-zinc-900 text-white border border-purple-400">
         <h2 className="text-2xl font-bold pb-5">Sign In</h2>
         <form onSubmit={submitClick}>
