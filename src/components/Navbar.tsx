@@ -41,6 +41,7 @@ function Navbar({ className }: { className?: string }) {
             </div>
           </MenuItem>
         </Menu>
+        
         <Menu setActive={setActive}>
           <Link href={"#footer"}>
             <MenuItem
