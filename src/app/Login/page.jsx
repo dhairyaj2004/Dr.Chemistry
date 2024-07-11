@@ -55,8 +55,8 @@ function Page() {
   };
 
   return (
-    <div className="flex min-h-screen mt-10 items-center justify-center">
-      <div className="w-96 rounded-lg shadow-lg p-5 bg-zinc-900 text-white border border-purple-400">
+    <div className="flex min-h-screen md:mt-10 items-center justify-center">
+      <div className="w-72 md:w-96 lg:w-p6 rounded-lg shadow-lg p-5 bg-zinc-900 text-white border border-purple-400">
         <h2 className="text-2xl font-bold pb-5">Sign In</h2>
         <form onSubmit={submitClick}>
           <div className="mb-4">
@@ -103,7 +103,7 @@ function Page() {
               <path d="M36.3425 16.7358H35V16.6667H20V23.3333H29.4192C28.7592 25.1975 27.56 26.805 26.0133 27.9758C26.0142 27.975 26.015 27.975 26.0158 27.9742L31.1742 32.3392C30.8092 32.6708 36.6667 28.3333 36.6667 20C36.6667 18.8825 36.5517 17.7917 36.3425 16.7358Z" fill="#1976D2" />
             </svg>
 
-            <span className="mx-12">Sign in with Google</span>
+            <span className="md:mx-12">Sign in with Google</span>
           </button>
 
           <div className="flex items-center justify-center text-sm mt-5">

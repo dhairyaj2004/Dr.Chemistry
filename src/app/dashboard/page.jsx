@@ -1,19 +1,17 @@
 "use client";
 import { signOut } from "next-auth/react";
 import ProtectedRoute from "../../components/ProtectedRoute";
-import { useRouter } from 'next/navigation';
+
 const Dashboard = () => {
-  const router = useRouter();
+
   const handleLogout = async () => {
     await signOut({ callbackUrl: "/Login" });
   };
-  const handleEnroll =  () => {
-     router.push('/Enroll'); 
-  };
+  
   return (
     <ProtectedRoute>
       <div>
-        <div className="py-14 mt-10 px-10 flex justify-between">
+        <div className="py-14 mt-10 md:px-10 lg:px-10 px-2 flex justify-between">
           <h1 className="font-serif font-extrabold text-3xl md:text-5xl lg:text-5xl">
             Dashboard
           </h1>
@@ -24,10 +22,10 @@ const Dashboard = () => {
             Logout
           </button>
         </div>
-        <h2 className="px-10 text-2xl md:text-3xl lg:text-4xl leading-5 font-bold text-red-300 ">
+        <h2 className="md:px-10 lg:px-10 px-2 text-2xl md:text-3xl lg:text-4xl leading-5 font-bold text-red-300 ">
           Your Courses
         </h2>
-        <div className="flex justify-center">
+        <div className="flex justify-center ">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center">
             <div className="relative mt-12 ml-10 flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
               <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl shadow-lg">
@@ -100,16 +98,16 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className="py-5 px-10 flex justify-between">
+        {/* <div className="py-5 px-10 flex justify-between">
         <h4 className="px-10 text-2xl md:text-3xl leading-5 font-bold text-red-300 mt-12">Join Batch</h4>
         <button
             onClick={handleEnroll}
             className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mt-10 ml-10 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
           >
             ENROLL NOW
-          </button>
-      </div>
-      <div className="grid grid-cols-1 gap-3 justify-between">
+          </button> */}
+      {/* </div> */}
+      {/* <div className="grid grid-cols-1 gap-3 justify-between">
   <table className="min-w-full bg-white border border-gray-200 rounded-lg shadow-md">
     <thead>
       <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
@@ -128,7 +126,7 @@ const Dashboard = () => {
       </tr>
     </tbody>
   </table>
-</div>
+</div> */}
 
       </div>
     </ProtectedRoute>
