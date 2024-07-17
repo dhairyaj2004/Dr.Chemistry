@@ -155,14 +155,14 @@ const Dashboard = () => {
             Add Thread
           </button>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 mb-2 ml-2 px-8  gap-4 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-2 px-8  gap-4 ">
           {error && <p className="text-red-500 mb-4">{error}</p>}
           {threads.map((thread) => (
             <div className="relative h-full ml-0 mr-0 sm:mr-10" key={thread._id}>
               <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"></span>
               <div className="relative h-full p-5 bg-white border-2 border-indigo-500 rounded-lg">
                 <div className="flex justify-between">
-                  <h3 className="my-2 ml-3 text-xl font-bold text-indigo-500 uppercase">
+                  <h3 className="my-2  text-xl font-bold text-indigo-500 uppercase">
                     {thread.title}
                   </h3>
                   <div>
@@ -195,12 +195,12 @@ const Dashboard = () => {
                   </svg></div>
                 </div>
                 <div className="flex justify-between">
-                  <p className="my-2 ml-3 text-md font-bold text-gray-500 uppercase">
-                    Topic: {thread.topic}
+                  <p className="mb-2 -mt-6 text-sm font-bold text-gray-500 uppercase">
+                    {thread.topic}
                   </p>
                   
                 </div>
-                <p className="mb-2 ml-3 text-gray-600">{thread.description}</p>
+                <p className="mb-2  text-gray-600">{thread.description}</p>
               </div>
             </div>
           ))}
