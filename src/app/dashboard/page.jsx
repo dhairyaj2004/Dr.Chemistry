@@ -155,7 +155,7 @@ const Dashboard = () => {
             Add Thread
           </button>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 mb-2 ml-2 px-8 mr-2 gap-4 ">
+        <div className="grid grid-cols-1 sm:grid-cols-3 mb-2 ml-2 px-8  gap-4 ">
           {error && <p className="text-red-500 mb-4">{error}</p>}
           {threads.map((thread) => (
             <div className="relative h-full ml-0 mr-0 sm:mr-10" key={thread._id}>
@@ -165,6 +165,7 @@ const Dashboard = () => {
                   <h3 className="my-2 ml-3 text-xl font-bold text-indigo-500 uppercase">
                     {thread.title}
                   </h3>
+                  <div>
                   <button onClick={() => handleDelete(thread._id)}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -177,11 +178,6 @@ const Dashboard = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>
-                </div>
-                <div className="flex justify-between">
-                  <p className="my-2 ml-3 text-md font-bold text-gray-500 uppercase">
-                    Topic: {thread.topic}
-                  </p>
                   <svg
                     onClick={() => handleUpdate(thread._id)}
                     xmlns="http://www.w3.org/2000/svg"
@@ -196,7 +192,13 @@ const Dashboard = () => {
                       strokeWidth="1.5"
                       d="M21,12a1,1,0,0,0-1,1v6a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4h6a1,1,0,0,0,0-2H5A3,3,0,0,0,2,5V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V13A1,1,0,0,0,21,12ZM6,12.76V17a1,1,0,0,0,1,1h4.24a1,1,0,0,0,.71-.29l6.92-6.93h0L21.71,8a1,1,0,0,0,0-1.42L17.47,2.29a1,1,0,0,0-1.42,0L13.23,5.12h0L6.29,12.05A1,1,0,0,0,6,12.76ZM16.76,4.41l2.83,2.83L18.17,8.66,15.34,5.83ZM8,13.17l5.93-5.93,2.83,2.83L10.83,16H8Z"
                     />
-                  </svg>
+                  </svg></div>
+                </div>
+                <div className="flex justify-between">
+                  <p className="my-2 ml-3 text-md font-bold text-gray-500 uppercase">
+                    Topic: {thread.topic}
+                  </p>
+                  
                 </div>
                 <p className="mb-2 ml-3 text-gray-600">{thread.description}</p>
               </div>
