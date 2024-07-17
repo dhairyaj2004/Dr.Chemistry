@@ -13,11 +13,7 @@ const threadSchema = mongoose.Schema({
     type: String,
     enum: ["Organic Chemistry", "Inorganic Chemistry", "Biochemistry"],
     required: true,
-  },
-  creator: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
-  },
+  }
 });
 const Thread =
   mongoose.models.threads || mongoose.model("threads", threadSchema);

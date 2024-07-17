@@ -7,16 +7,40 @@ const Dashboard = () => {
   const handleLogout = async () => {
     await signOut({ callbackUrl: "/Login" });
   };
-  const handleAdd = async () => {
-    await signOut({ callbackUrl: "/threadAdd" });
+
+  const handleAdd = () => {
+    window.location.href = '/threadAdd';
+  };
+
+  const handleUpdate = (id) => {
+    console.log(id)
+    window.location.href = `threadUpdate/${id}`;
+  };
+  const handleDelete = async (id) => {
+    try {
+      const response = await fetch(`/api/users/threads/${id}`, {
+        method: 'DELETE',
+      });
+  
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Failed to delete thread');
+      }
+      window.location.reload()
+      const data = await response.json();
+      console.log(data.message); // Log success message
+    } catch (error) {
+      console.error('Error deleting thread:', error);
+      
+    }
   };
   const [threads, setThreads] = useState([]);
   const [error, setError] = useState(null);
-
+  
   useEffect(() => {
     async function fetchThreads() {
       try {
-        const response = await fetch("/api/users/threads");
+        const response = await fetch("/api/users/threads/[id]");
         if (!response.ok) {
           throw new Error("Failed to fetch threads");
         }
@@ -35,9 +59,7 @@ const Dashboard = () => {
     <ProtectedRoute>
       <div>
         <div className="py-14 mt-10 md:px-10 lg:px-10 px-2 flex justify-between">
-          <h1 className="font-serif font-extrabold text-3xl md:text-5xl lg:text-5xl">
-            Dashboard
-          </h1>
+          <h1 className="font-serif font-extrabold text-3xl md:text-5xl lg:text-5xl">Dashboard</h1>
           <button
             onClick={handleLogout}
             className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
@@ -45,15 +67,16 @@ const Dashboard = () => {
             Logout
           </button>
         </div>
-        <h2 className="md:px-10 lg:px-10 px-2 text-2xl md:text-3xl lg:text-4xl leading-5 font-bold text-red-300 ">
+        <h2 className="md:px-10 lg:px-10 px-2 text-2xl md:text-3xl lg:text-4xl leading-5 font-bold text-red-300">
           Your Courses
         </h2>
-        <div className="flex justify-center ">
+        <div className="flex justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center">
+            {/* Sample course cards */}
             <div className="relative mt-12 ml-10 flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
               <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src="https://dme2wmiz2suov.cloudfront.net/User(3471047)/CourseBundles(34585)/2309841-Blue_And_White_Modern_Website_Development_Services_Facebook_Post_(YouTube_Thumbnail)-6.png" // Replace with the actual path to your image
+                  src="https://dme2wmiz2suov.cloudfront.net/User(3471047)/CourseBundles(34585)/2309841-Blue_And_White_Modern_Website_Development_Services_Facebook_Post_(YouTube_Thumbnail)-6.png"
                   alt="Organic Chemistry Image"
                   className="object-cover w-full h-full"
                 />
@@ -76,8 +99,8 @@ const Dashboard = () => {
             <div className="relative mt-12 ml-10 flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
               <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src="https://dme2wmiz2suov.cloudfront.net/User(3471047)/CourseBundles(34580)/2309835-Blue_And_White_Modern_Website_Development_Services_Facebook_Post_(YouTube_Thumbnail)-5.png" // Replace with the actual path to your image
-                  alt="Organic Chemistry Image"
+                  src="https://dme2wmiz2suov.cloudfront.net/User(3471047)/CourseBundles(34580)/2309835-Blue_And_White_Modern_Website_Development_Services_Facebook_Post_(YouTube_Thumbnail)-5.png"
+                  alt="Inorganic Chemistry Image"
                   className="object-cover w-full h-full"
                 />
               </div>
@@ -99,14 +122,14 @@ const Dashboard = () => {
             <div className="relative mt-12 ml-10 flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
               <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl shadow-lg">
                 <img
-                  src="https://i.ytimg.com/vi/A1sX5FdeIYk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBi0jv2TpJkG8F7CyKQEjizGputUg" // Replace with the actual path to your image
-                  alt="Organic Chemistry Image"
+                  src="https://i.ytimg.com/vi/A1sX5FdeIYk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBi0jv2TpJkG8F7CyKQEjizGputUg"
+                  alt="General Chemistry Image"
                   className="object-cover w-full h-full"
                 />
               </div>
               <div className="p-6">
                 <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-                  Organic Chemistry
+                  BioChemistry
                 </h5>
               </div>
               <div className="p-6 pt-0">
@@ -132,17 +155,17 @@ const Dashboard = () => {
             Add Thread
           </button>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 mb-2 ml-2 mr-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 mb-2 ml-2 px-8 mr-2 gap-4 ">
           {error && <p className="text-red-500 mb-4">{error}</p>}
           {threads.map((thread) => (
-            <div className="relative h-full ml-0 mr-0 sm:mr-10">
+            <div className="relative h-full ml-0 mr-0 sm:mr-10" key={thread._id}>
               <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"></span>
               <div className="relative h-full p-5 bg-white border-2 border-indigo-500 rounded-lg">
                 <div className="flex justify-between">
                   <h3 className="my-2 ml-3 text-xl font-bold text-indigo-500 uppercase">
                     {thread.title}
                   </h3>
-                  <div>
+                  <button onClick={() => handleDelete(thread._id)}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -151,22 +174,19 @@ const Dashboard = () => {
                       stroke="currentColor"
                       className="w-6 h-6 text-red-500 hover:text-red-700 cursor-pointer my-2 ml-3"
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M6 18L18 6M6 6l12 12"
-                      />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>
-                  </div>
+                  </button>
                 </div>
                 <div className="flex justify-between">
                   <p className="my-2 ml-3 text-md font-bold text-gray-500 uppercase">
                     Topic: {thread.topic}
                   </p>
                   <svg
+                    onClick={() => handleUpdate(thread._id)}
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
-                    className="h-6 w-6 ml-3"
+                    className="h-6 w-6 ml-3 cursor-pointer"
                     fill="none"
                     stroke="green"
                   >

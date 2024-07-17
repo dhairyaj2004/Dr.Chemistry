@@ -11,7 +11,7 @@ function Page() {
 
   const handleCreate = async (e) => {
     e.preventDefault();
-    
+    window.location.href='/dashboard'
     // Check if any required field is empty
     if (!title || !desc) {
       setError("Please fill all the fields");
@@ -19,7 +19,7 @@ function Page() {
     }
 
     try {
-        const res = await fetch("/api/users/threads", {
+        const res = await fetch("/api/users/threads/[id]", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ title, desc, topic }),
