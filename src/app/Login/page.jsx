@@ -29,7 +29,9 @@ function Page() {
       if (res.error) {
         setError("Invalid Credentials");
       } else {
-        router.replace("/dashboard"); // Redirect to home on successful login
+        
+        router.replace("/dashboard"); // Redirect to dashboard on successful login
+
       }
     } catch (error) {
       console.log(error);
