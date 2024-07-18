@@ -1,9 +1,20 @@
 "use client";
-import { signOut } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 import ProtectedRoute from "../../components/ProtectedRoute";
 import React, { useState, useEffect } from "react";
 
 const Dashboard = () => {
+  const { data: session, status } = useSession();
+  const [threads, setThreads] = useState([]); // Moved useState hooks to the top
+  const [error, setError] = useState(null);   // Moved useState hooks to the top
+
+  useEffect(() => {
+    
+    if (status === 'unauthenticated') {
+      window.location.href = '/Login';
+    }
+  }, [status]);
+
   const handleLogout = async () => {
     await signOut({ callbackUrl: "/Login" });
   };
@@ -16,27 +27,25 @@ const Dashboard = () => {
     console.log(id)
     window.location.href = `threadUpdate/${id}`;
   };
+
   const handleDelete = async (id) => {
     try {
       const response = await fetch(`/api/users/threads/${id}`, {
         method: 'DELETE',
       });
-  
+
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || 'Failed to delete thread');
       }
-      window.location.reload()
+      window.location.reload();
       const data = await response.json();
       console.log(data.message); // Log success message
     } catch (error) {
       console.error('Error deleting thread:', error);
-      
     }
   };
-  const [threads, setThreads] = useState([]);
-  const [error, setError] = useState(null);
-  
+
   useEffect(() => {
     async function fetchThreads() {
       try {
@@ -53,7 +62,15 @@ const Dashboard = () => {
     }
 
     fetchThreads();
-  }, []);
+  }, []); // Ensure useEffect dependencies are correct
+
+  if (status === 'loading') {
+    return <div>Loading...</div>;
+  }
+
+  if (!session) {
+    return <div>You are not logged in. Please log in to access this page.</div>;
+  }
 
   return (
     <ProtectedRoute>

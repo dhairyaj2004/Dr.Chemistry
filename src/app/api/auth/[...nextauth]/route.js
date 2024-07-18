@@ -67,16 +67,20 @@ const authOptions = {
     async jwt({ token, user }) {
       if (user) {
         token.user = user;
+        token.iat = Math.floor(Date.now() / 1000); // Update token issued at time
       }
+      console.log('JWT Token:', token);
       return token;
     },
     async session({ session, token }) {
       session.user = token.user;
+      console.log('Session:', session);
       return session;
     },
   },
   session: {
     strategy: 'jwt',
+    maxAge: 2 * 60 * 60, // 2 hours
   },
   secret: process.env.NEXTAUTH_SECRET,
   pages: {
