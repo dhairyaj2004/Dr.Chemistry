@@ -67,7 +67,16 @@ function mainsec() {
             >
               Chemistry Clips
             </Button>
-          </Link></div>
+          </Link>
+          <Link href={"/dashboard"}>
+            <Button
+              borderRadius="1.75rem"
+              className="bg-white dark:bg-black text-black dark:text-red-300 border-neutral-200 dark:border-slate-800 font-weight-2 rounded-lg"
+            >
+              Your Dashboard
+            </Button>
+          </Link>
+          </div>
         </div>
       </div>
       <div>

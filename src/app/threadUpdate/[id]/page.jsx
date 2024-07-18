@@ -62,7 +62,7 @@ const ThreadUpdate = () => {
         setDesc('');
         setTopic('');
         setError('');
-        router.push('/'); // or wherever you want to redirect after update
+        router.push('/dashboard'); // or wherever you want to redirect after update
       } else {
         throw new Error('Failed to update thread');
       }
