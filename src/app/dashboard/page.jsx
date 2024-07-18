@@ -65,11 +65,19 @@ const Dashboard = () => {
   }, []); // Ensure useEffect dependencies are correct
 
   if (status === 'loading') {
-    return <div>Loading...</div>;
+    <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-zinc-900">
+    <div className="bg-black p-8 rounded-md shadow-md flex">
+     <p className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-100"></p> <div className="mt-3 ml-3">Wait for a While</div>
+    </div>
+  </div>
   }
 
   if (!session) {
-    return <div>You are not logged in. Please log in to access this page.</div>;
+    return <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-zinc-900">
+    <div className="bg-black p-8 rounded-md shadow-md flex">
+     <p className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-100"></p> <div className="mt-3 ml-3">Wait for a While, Otherwise Login again</div>
+    </div>
+  </div>
   }
 
   return (
