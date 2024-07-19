@@ -82,12 +82,12 @@ const Dashboard = () => {
 
   return (
     <ProtectedRoute>
-      <div>
-        <div className="py-14 mt-10 md:px-10 lg:px-10 px-2 flex justify-between">
+      <div className="bg-zinc-900">
+        <div className="py-10 md:px-10 lg:px-10 px-2 flex justify-between">
           <h1 className="font-serif font-extrabold text-3xl md:text-5xl lg:text-5xl">Dashboard</h1>
           <button
             onClick={handleLogout}
-            className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+            className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mt-10 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
           >
             Logout
           </button>
