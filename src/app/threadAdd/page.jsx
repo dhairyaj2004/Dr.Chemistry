@@ -16,7 +16,7 @@ function Page() {
     if (!title || !desc) {
       setError("Please fill all the fields");
       return;
-    }
+    } 
 
     try {
         const res = await fetch("/api/users/threads/[id]", {

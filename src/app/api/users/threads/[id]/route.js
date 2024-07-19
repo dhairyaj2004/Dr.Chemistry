@@ -2,7 +2,7 @@
 import connection from "../../../../../dbConnection/dbConnection";
 import Thread from "../../../../../models/threadModel";
 import { NextResponse } from "next/server";
-import { ObjectId } from 'mongodb';
+import { getSession } from "next-auth/react"; 
 export async function POST(request) {
   try {
     const { title, desc, topic } = await request.json();
@@ -38,10 +38,18 @@ export async function PUT(req) {
   try {
     // Extract the ID from the URL
     const id = req.url.split('/').pop();
+    // const session = await getSession({ req });
+    // if (!session) {
+    //   return res.status(401).json({ message: "Unauthorized" });
+    // }
 
-    // Parse the request body
+    // const { userId } = session.user;
+    // // Parse the request body
+    
+    // if (Thread.userId !== userId) {
+    //   return res.status(403).json({ message: "Forbidden" });
+    // }
     const { title, desc, topic } = await req.json();
-
     // Find and update the thread
     const updatedThread = await Thread.findByIdAndUpdate(
       id,

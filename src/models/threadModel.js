@@ -13,7 +13,10 @@ const threadSchema = mongoose.Schema({
     type: String,
     enum: ["Organic Chemistry", "Inorganic Chemistry", "Biochemistry"],
     required: true,
-  }
+  },
+  // userId: {
+  //   type: String
+  // } // Store the user ID
 });
 const Thread =
   mongoose.models.threads || mongoose.model("threads", threadSchema);
