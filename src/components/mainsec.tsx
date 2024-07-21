@@ -54,7 +54,7 @@ function mainsec() {
           <Link href={"/Images"}>
             <Button
               borderRadius="1.75rem"
-              className="bg-white dark:bg-black text-black dark:text-red-300 border-neutral-200 dark:border-slate-800 font-weight-2 rounded-lg"
+              className="font-medium dark:bg-black text-black dark:text-red-300 border-neutral-200 dark:border-slate-800 font-weight-2 rounded-lg"
             >
               Chemistry Gallery
             </Button>
@@ -63,7 +63,7 @@ function mainsec() {
           <Link href={"/Videos"}>
             <Button
               borderRadius="1.75rem"
-              className="bg-white dark:bg-black text-black dark:text-red-300 border-neutral-200 dark:border-slate-800 font-weight-2 rounded-lg"
+              className="font-medium dark:bg-black text-black dark:text-red-300 border-neutral-200 dark:border-slate-800 font-weight-2 rounded-lg"
             >
               Chemistry Clips
             </Button>
@@ -71,7 +71,7 @@ function mainsec() {
           <Link href={"/dashboard"}>
             <Button
               borderRadius="1.75rem"
-              className="bg-white dark:bg-black text-black dark:text-red-300 border-neutral-200 dark:border-slate-800 font-weight-2 rounded-lg"
+              className="font-medium dark:bg-black text-black dark:text-red-300 border-neutral-200 dark:border-slate-800  rounded-lg"
             >
               Dashboard
             </Button>

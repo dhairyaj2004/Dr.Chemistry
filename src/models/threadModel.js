@@ -15,8 +15,10 @@ const threadSchema = mongoose.Schema({
     required: true,
   },
   // userId: {
-  //   type: String
-  // } // Store the user ID
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: 'User',
+  //   required: true,
+  // }, // Store the user ID
 });
 const Thread =
   mongoose.models.threads || mongoose.model("threads", threadSchema);
