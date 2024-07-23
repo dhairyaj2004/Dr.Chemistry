@@ -55,7 +55,7 @@ const router=useRouter();
   };
   
   return (
-    <div className='flex min-h-screen items-center justify-center md:mt-10'>
+    <div className='flex min-h-screen items-center justify-center md:mt-10 bg-gradient-to-b from-gray-950 to-gray-900'>
         <section className="flex flex-col items-center pt-6">
   <div
     className="w-full bg-white rounded-lg shadow-lg dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gradient-to-b from-gray-950 to-gray-900 dark:border-purple-400">
