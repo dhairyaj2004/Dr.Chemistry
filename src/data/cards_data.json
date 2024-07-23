@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Inorganic Chemistry",
-      "description": "The study of inorganic compounds and materials, including metals, minerals, and organometallic compounds.",
+      "description": "Study of non-organic compounds, including metals, minerals, and organometallic compounds, focusing on their properties, structures, and reactions.",
       "imageUrl": "https://t4.ftcdn.net/jpg/05/75/38/09/360_F_575380986_zl6fgghJ9NHNIXlMBVUeadJTY2uBtRpo.jpg",
       "pageUrl": "/Inorganic",
       "isFeatured":true
@@ -11,7 +11,7 @@
     {
       "id": 2,
       "name": "Organic Chemistry",
-      "description": "The study of carbon-containing compounds and their reactions.",
+      "description": "Study of carbon-containing compounds, their structures, properties, reactions, and synthesis, focusing on hydrocarbons and their derivatives.",
       "imageUrl": "https://t4.ftcdn.net/jpg/01/41/20/41/360_F_141204155_2XIe4qkX1SK4waITeqAB0dNxgziZAeU2.jpg",
       "pageUrl": "/Organic",
       "isFeatured":true
@@ -27,7 +27,7 @@
     {
       "id": 4,
       "name": "BioChemistry",
-      "description": "The study of the chemical processes and substances that occur within living organisms.",
+      "description": "Study of chemical processes within living organisms, including metabolism, enzyme function, and molecular biology, focusing on biomolecules.",
       "imageUrl": "https://images.newscientist.com/wp-content/uploads/2019/10/22153920/biochemistry-shutterstock_187967735_web.jpg",
       "pageUrl": "/Bio",
       "isFeatured":true

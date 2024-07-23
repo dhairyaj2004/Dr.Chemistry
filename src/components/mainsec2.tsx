@@ -15,10 +15,10 @@ function MainSec2() {
   const featuredCards = cardData.chemistryFields.filter((field: Field) => field.isFeatured);
 
   return (
-    <div className="mt-12 px-8 py-12 bg-gray-900">
-      <div>
-        <h1 className="text-center text-teal-600 font-semibold tracking-wide text-2xl">HERO COURSES</h1>
-        <h2 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-red-300 sm:text-4xl text-center">
+    <div className="px-8 py-12 bg-gray-900">
+      <div className="">
+        <h1 className="mt-8 text-center text-teal-600 font-semibold tracking-wide text-2xl md:text-3xl lg:text-3xl">HERO COURSES</h1>
+        <h2 className="mt-8 text-3xl leading-8 font-extrabold tracking-tight text-red-300 sm:text-4xl text-center">
           LEARN WITH THE BEST
         </h2>
       </div>
@@ -29,7 +29,7 @@ function MainSec2() {
             <BackgroundGradient>
             <h1 className="text-2xl font-bold uppercase">{field.name}</h1>
             <img src={field.imageUrl} alt={field.name} className="mt-4 rounded-2xl justify-center" />
-            <p className="mt-2">{field.description}</p> 
+            <p className="mt-6 ml-4 text-left">{field.description}</p> 
             <a href={field.pageUrl} className="mt-4 inline-block text-teal-600 hover:underline"><button className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">VIEW MORE</button></a>
             
             </BackgroundGradient>
