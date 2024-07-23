@@ -87,7 +87,7 @@ const Dashboard = () => {
 
   return (
     <ProtectedRoute>
-      <div className="bg-zinc-900">
+      <div className="bg-gradient-to-b from-gray-950 to-gray-900">
         <div className="py-10 md:px-10 lg:px-10 px-2 flex justify-between">
           <h1 className="font-serif font-extrabold text-3xl md:text-5xl lg:text-5xl">
             Dashboard

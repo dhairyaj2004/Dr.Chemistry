@@ -3,7 +3,7 @@
 function page() {
   return (
 
-<div className='flex flex-col min-h-screen justify-center items-center bg-zinc-900 '>
+<div className='flex flex-col min-h-screen justify-center items-center  bg-gradient-to-b from-gray-950 to-gray-900 '>
   <div className='flex flex-col md:flex-row items-center justify-center py-20 mt-12 px-5'>
     <img src="https://dme2wmiz2suov.cloudfront.net/User(3471047)/CourseBundles(34585)/2309841-Blue_And_White_Modern_Website_Development_Services_Facebook_Post_(YouTube_Thumbnail)-6.png" height={500} width={500} alt="thumbnail" className='md:w-1/2' />
     <div className='text-center md:text-left mt-5 md:ml-5'>

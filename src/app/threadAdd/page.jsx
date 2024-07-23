@@ -41,7 +41,7 @@ function Page() {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-900 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-b from-gray-950 to-gray-900flex items-center justify-center">
       <div className="max-w-md w-full mx-auto p-8 bg-black rounded-md shadow-md border border-purple-500">
         <h2 className="text-2xl font-bold text-gray-100 mb-6">Create Thread</h2>
         <form onSubmit={handleCreate}>

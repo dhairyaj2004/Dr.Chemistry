@@ -1,7 +1,7 @@
 'use-client'
 function page() {
   return (
-   <div className="bg-zinc-900">
+   <div className="bg-gradient-to-b from-gray-950 to-gray-900">
     <section className="mt-14 py-20 text-center text-teal-600 uppercase ">
     <div className="max-w-7xl mx-auto px-4">
       <h1 className="text-3xl font-semibold">Experience the thrill of chemistry with these must-watch videos.</h1>

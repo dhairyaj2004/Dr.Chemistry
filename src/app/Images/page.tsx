@@ -169,7 +169,7 @@ function page() {
   ];
   return (
 
-    <div className="mt-14 py-20 w-full h-screen overflow-y-auto bg-zinc-900">
+    <div className="mt-14 py-20 w-full h-screen overflow-y-auto bg-gradient-to-b from-gray-950 to-gray-900">
       <section className="text-center text-teal-400 uppercase ">
     <div className="max-w-7xl mx-auto px-4">
       <h1 className="text-3xl font-semibold">Enjoy a <span className="text-red-300">visual feast</span> of <span className="text-red-300">chemistry</span></h1>
