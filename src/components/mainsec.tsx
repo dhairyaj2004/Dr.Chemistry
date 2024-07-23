@@ -124,7 +124,7 @@ function MainSec() {
       <div className="min-h-screen w-full flex flex-col items-center justify-center relative overflow-hidden py-10 md:py-0 bg-gradient-to-b from-black/15 to-gray-900">
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
         <div className="py-10 flex flex-col z-10 align-middle justify-center items-center">
-          <div className="sm:mt-10 md:mt-20 md:text-7xl sm:text-6xl text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+          <div className="sm:mt-10 md:mt-20 md:text-8xl sm:text-6xl text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
             <span className="font-serif" style={{ color: "red" }}>Dr. </span>
             <span className="font-serif" style={{ color: "white" }}>Chemistry</span>
           </div>

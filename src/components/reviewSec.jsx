@@ -42,7 +42,7 @@ function reviewSec() {
                     <div className="relative h-full p-5 bg-white border-2 border-indigo-500 rounded-lg">
                         <div className="flex items-center -mt-1">
                         <img src="https://img.freepik.com/premium-photo/image-25-year-old-indian-man-that-is-smiling-camera_878783-7217.jpg" alt="Profile Photo" className="w-14 h-14 rounded-full" />
-                            <h3 className="my-2 ml-3 text-xl font-bold text-gray-800">Gurkeerat Singh</h3>
+                            <h3 className="my-2 ml-3 text-xl font-bold text-gray-800">Akshar Gaikwad</h3>
                         </div>
                         <p className="my-2 ml-3 text-md font-bold text-indigo-500 uppercase">92% in H.S.C. Board</p>
                         <p className="mb-2 text-gray-600">Effective teaching techniques keep classes interactive and interesting. Study materials are well-curated and enhance learning. Teachers are supportive, approachable, and go the extra mile to help students succeed.</p>
