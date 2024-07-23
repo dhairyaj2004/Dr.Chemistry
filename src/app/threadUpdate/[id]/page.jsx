@@ -74,7 +74,7 @@ const ThreadUpdate = () => {
   if (loading) {
     return (
       <div>
-        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gradient-to-b from-gray-950 to-gray-900">
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-zinc-900">
           <div className="bg-black p-8 rounded-md shadow-md flex">
             <p className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-100"></p>{" "}
             <div className="mt-3 ml-3">Wait for a While</div>
@@ -85,8 +85,8 @@ const ThreadUpdate = () => {
   }
 
   return (
-    <div className="flex mt-10 py-8 justify-center items-center min-h-screen bg-black">
-      <div className="bg-zinc-900 shadow-md rounded-lg p-6 md:p-10 max-w-xl w-full border border-purple-500">
+    <div className="flex mt-10 py-8 justify-center items-center min-h-screen bg-gradient-to-b from-gray-950 to-gray-900">
+      <div className="bg-gradient-to-r from-transparent to-gray-900 shadow-md rounded-lg p-6 md:p-10 max-w-xl w-full border border-purple-500">
         <h1 className="text-3xl font-bold mb-5 text-center">Update Thread</h1>
         <form onSubmit={handleUpdate}>
           <div className="mb-4">
