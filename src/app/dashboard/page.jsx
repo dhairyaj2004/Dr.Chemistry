@@ -29,6 +29,8 @@ const Dashboard = () => {
 
   const handleDelete = async (id) => {
     try {
+      let descision=confirm("Sure? After deleting thread will no longer accessible to anyone.")
+      if(descision){
       const response = await fetch(`/api/users/threads/${id}`, {
         method: "DELETE",
       });
@@ -40,7 +42,11 @@ const Dashboard = () => {
       window.location.reload();
       const data = await response.json();
       console.log(data.message); // Log success message
-    } catch (error) {
+    }
+  else{
+    alert("Thread is not deleted")
+  }
+  } catch (error) {
       console.error("Error deleting thread:", error);
     }
   };
