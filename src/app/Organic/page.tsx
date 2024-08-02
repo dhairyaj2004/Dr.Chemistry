@@ -1,5 +1,5 @@
 'use-client'
-
+import Link from "next/link"
 function page() {
   return (
 
@@ -13,7 +13,8 @@ function page() {
           Live Lectures • Live Tutorials • Competitive exam's practice </h3> 
       <h3 className='font-semibold md:text-xl mt-5 text-red-200'>5k+ students • Lifetime valid • Notes & Material included. </h3>
       <div className="flex justify-center">
-      <button className="mt-9 text-white bg-yellow-500 hover:bg-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900">Buy Course for 99₹</button></div>
+      <Link href="/payment">
+      <button className="mt-9 text-white bg-yellow-500 hover:bg-yellow-400 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:focus:ring-yellow-900">Buy Course for 99₹</button></Link></div>
     </div>
   </div>
   <div className="flex flex-col items-center text-left w-full px-5">
