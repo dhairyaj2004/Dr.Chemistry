@@ -10,7 +10,7 @@ function Payment() {
     return (
         <div className="max-w-8xl mx-auto p-10 text-white text-center m-10 rounded-md bg-gradient-to-tr from-black/15 to-gray-900 mt-16">
             <div className="mb-10">
-                <h1 className="text-4xl font-extrabold mb-2"><span className="text-red-500">Dr. </span>Chemistry</h1>
+                <h1 className="text-4xl font-extrabold mb-2 font-serif"><span className="font-serif" style={{ color: "red" }}>Dr. </span>Chemistry</h1>
                 <h2 className="text-2xl">
                     has charged only
                     <span className="font-bold"> {amount}₹ </span>

@@ -44,7 +44,7 @@ const CheckoutPage = ({ amount }) => {
       elements,
       clientSecret,
       confirmParams: {
-        return_url: `http://localhost:3000/payment-success?amount=${amount}`,
+        return_url: `${window.location.origin}/payment-success?amount=${amount}`,
       },
     });
 
@@ -55,7 +55,6 @@ const CheckoutPage = ({ amount }) => {
       setErrorMessage(null);
       setLoading(false);
       // Optionally, you can redirect manually here if needed
-      window.location.href = `http://localhost:3000/payment-success?amount=${amount}`;
     }
   };
 
@@ -76,7 +75,7 @@ const CheckoutPage = ({ amount }) => {
       {errorMessage && <div className="text-red-500 mt-2">{errorMessage}</div>}
       <button
         disabled={!stripe || loading}
-        className="w-full mt-8 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-300"
+        className="w-full mt-8 bg-gradient-to-r from-purple-500 to-blue-500 text-white py-2 rounded-md  transition duration-300"
       >
         {!loading ? `Pay ${amount}₹` : "Processing..."}
       </button>
