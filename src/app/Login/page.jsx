@@ -52,7 +52,7 @@ function Page() {
       }
     } catch (error) {
       console.log("Google sign-in error:", error);
-      setError("Failed to sign in with ");
+      setError("Failed to sign in with Google ");
     }
   };
 

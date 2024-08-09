@@ -11,7 +11,13 @@ export default function PaymentSuccess({
           <div className="p-4 rounded-md bg-gradient-to-r from-purple-500 to-blue-500 text-white mt-5 text-4xl font-bold shadow-lg transform transition duration-500 hover:scale-105">
             ₹{amount}
           </div>
+          <div>
+            
+          </div>
         </div>
+        <button className="p-2 rounded-md bg-blue-700 text-white mt-5 text-xl font-semibold shadow-lg ">
+              Back to Home Page
+            </button>
       </div>
     </main>
     
