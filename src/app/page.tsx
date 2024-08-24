@@ -8,7 +8,6 @@ import Footer from "@/components/footer";
 export default function Home() {
   return (
     <>
-
     <Mainsec/>
     <Mainsec2/>
     <WhyChooseUs/>
