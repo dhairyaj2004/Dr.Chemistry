@@ -1,6 +1,6 @@
 "use client";
 import { useSession, signOut } from "next-auth/react";
-const ProtectedRoute = dynamic(() => import('../../components/ProtectedRoute'));
+import ProtectedRoute from "../../components/ProtectedRoute";
 import React, { useState, useEffect } from "react";
 
 const Dashboard = () => {
