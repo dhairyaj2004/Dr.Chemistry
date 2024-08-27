@@ -48,7 +48,7 @@ function Page() {
         setError("Failed to sign in with Google");
       } else {
         console.log("Google sign-in successful, redirecting to home...");
-        router.replace("/"); // Redirect to home after successful Google sign-in
+        router.replace("/dashboard"); // Redirect to home after successful Google sign-in
       }
     } catch (error) {
       setTimeout(()=>{
