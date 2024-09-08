@@ -80,7 +80,7 @@ function Navbar({ className }: { className?: string }) {
           </MenuItem>
         </Menu>
         <Menu setActive={setActive}>
-          <Link href={"#footer"}>
+          <Link href={"/Contact"}>
             <MenuItem setActive={setActive} active={active} item="Contact" />
           </Link>
         </Menu>
@@ -111,8 +111,8 @@ function Navbar({ className }: { className?: string }) {
           <Link href="/Bio">
             <HoveredLink onClick={toggleMenu} href="/Bio">BioChemistry</HoveredLink>
           </Link>
-          <Link href="#footer">
-            <HoveredLink onClick={toggleMenu} href="#footer">Contact</HoveredLink>
+          <Link href="/Contact">
+            <HoveredLink onClick={toggleMenu} href="/Contact">Contact</HoveredLink>
           </Link>
           <Link href="/Login">
             <HoveredLink onClick={toggleMenu} href="/Login">Login</HoveredLink>
