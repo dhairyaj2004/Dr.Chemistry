@@ -63,10 +63,7 @@ function Navbar({ className }: { className?: string }) {
                 <HoveredLink href="/Images">Fascinating Photos</HoveredLink>
                 <HoveredLink href="/Videos">Engaging Videos</HoveredLink>
               </div>
-              <div className="flex flex-col space-y-4 text-sm md:hidden ml-5">
-                <HoveredLink href="/Images">Insightful</HoveredLink>
-                <HoveredLink href="/Videos">Engaging</HoveredLink>
-              </div>
+             
             </MenuItem>
           </Link>
         </Menu>
