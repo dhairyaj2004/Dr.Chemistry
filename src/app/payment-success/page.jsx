@@ -1,6 +1,8 @@
+"use client"
 export default function PaymentSuccess({
     searchParams: { amount },
-  }) {
+  }) 
+  {
     return (
       <main className="flex items-center justify-center min-h-screen">
       <div className="max-w-4xl mx-auto p-10 text-center rounded-md bg-gradient-to-tr from-gray-900 to-black shadow-xl border border-purple-700">
@@ -15,7 +17,7 @@ export default function PaymentSuccess({
             
           </div>
         </div>
-        <button className="p-2 rounded-md bg-blue-700 text-white mt-5 text-xl font-semibold shadow-lg ">
+        <button className="p-2 rounded-md bg-blue-700 text-white mt-5 text-xl font-semibold shadow-lg" onClick={() => (window.location.replace("/"))}>
               Back to Home Page
             </button>
       </div>
