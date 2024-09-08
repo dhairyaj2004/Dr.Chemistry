@@ -56,32 +56,40 @@ function Navbar({ className }: { className?: string }) {
 
        
         <div className="hidden md:flex space-x-8 ml-auto">
-          <Menu setActive={setActive}>
-            <Link href={"/"}>
-              <MenuItem setActive={setActive} active={active} item="Home">
-                Home
-              </MenuItem>
-            </Link>
-          </Menu>
-          <Menu setActive={setActive}>
-            <MenuItem setActive={setActive} active={active} item="Fields">
-              Fields
+        <Menu setActive={setActive}>
+          <Link href={"/"}>
+            <MenuItem setActive={setActive} active={active} item="Home">
+              <div className="hidden md:flex flex-col space-y-4 text-sm md:text-lg lg:text-lg">
+                <HoveredLink href="/Images">Fascinating Photos</HoveredLink>
+                <HoveredLink href="/Videos">Engaging Videos</HoveredLink>
+              </div>
+              <div className="flex flex-col space-y-4 text-sm md:hidden ml-5">
+                <HoveredLink href="/Images">Insightful</HoveredLink>
+                <HoveredLink href="/Videos">Engaging</HoveredLink>
+              </div>
             </MenuItem>
-          </Menu>
-          <Menu setActive={setActive}>
-            <Link href={"#footer"}>
-              <MenuItem setActive={setActive} active={active} item="Contact">
-                Contact
-              </MenuItem>
-            </Link>
-          </Menu>
-          <Menu setActive={setActive}>
-            <Link href={"/Login"}>
-              <MenuItem setActive={setActive} active={active} item="Login">
-                Login
-              </MenuItem>
-            </Link>
-          </Menu>
+          </Link>
+        </Menu>
+        <Menu setActive={setActive}>
+          <MenuItem setActive={setActive} active={active} item="Fields">
+            <div className="flex flex-col space-y-4 text-sm md:text-lg lg:text-lg">
+              <HoveredLink href="/Organic">Organic Chemistry</HoveredLink>
+              <HoveredLink href="/Inorganic">Inorganic Chemistry</HoveredLink>
+              <HoveredLink href="/Bio">BioChemistry</HoveredLink>
+            </div>
+          </MenuItem>
+        </Menu>
+        <Menu setActive={setActive}>
+          <Link href={"#footer"}>
+            <MenuItem setActive={setActive} active={active} item="Contact" />
+          </Link>
+        </Menu>
+        <Menu setActive={setActive}>
+          <Link href={"/Login"}>
+            <MenuItem setActive={setActive} active={active} item="Login" />
+          </Link>
+        </Menu>
+
         </div>
       </div>
 
