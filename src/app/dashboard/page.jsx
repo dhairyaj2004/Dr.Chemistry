@@ -29,24 +29,25 @@ const Dashboard = () => {
 
   const handleDelete = async (id) => {
     try {
-      let descision=confirm("Sure? After deleting thread will no longer accessible to anyone.")
-      if(descision){
-      const response = await fetch(`/api/users/threads/${id}`, {
-        method: "DELETE",
-      });
+      let descision = confirm(
+        "Sure? After deleting thread will no longer accessible to anyone."
+      );
+      if (descision) {
+        const response = await fetch(`/api/users/threads/${id}`, {
+          method: "DELETE",
+        });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || "Failed to delete thread");
+        if (!response.ok) {
+          const errorData = await response.json();
+          throw new Error(errorData.error || "Failed to delete thread");
+        }
+        window.location.reload();
+        const data = await response.json();
+        console.log(data.message); // Log success message
+      } else {
+        alert("Thread is not deleted");
       }
-      window.location.reload();
-      const data = await response.json();
-      console.log(data.message); // Log success message
-    }
-  else{
-    alert("Thread is not deleted")
-  }
-  } catch (error) {
+    } catch (error) {
       console.error("Error deleting thread:", error);
     }
   };
@@ -94,13 +95,13 @@ const Dashboard = () => {
   return (
     <ProtectedRoute>
       <div className="bg-gradient-to-b from-gray-950 to-gray-900">
-        <div className="py-10 md:px-10 lg:px-10 px-2 flex justify-between">
-          <h1 className="mt-10 font-serif font-extrabold text-3xl md:text-5xl lg:text-5xl">
+        <div className="py-12 md:px-10 lg:px-10 px-2 flex justify-between">
+          <h1 className="mt-12 font-serif font-extrabold text-3xl md:text-5xl lg:text-5xl">
             Dashboard
           </h1>
           <button
             onClick={handleLogout}
-            className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mt-10 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+            className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mt-12 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
           >
             Logout
           </button>
@@ -249,6 +250,81 @@ const Dashboard = () => {
               </div>
             </div>
           ))}
+        </div>
+        <h2 className="mt-12 md:px-10 lg:px-10 px-2 text-2xl md:text-3xl lg:text-4xl leading-5 font-bold text-red-300">
+          Demo Lectures
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
+          <div className="max-w-lg p-4 mx-auto md:mx-4 lg:mx-4 rounded-lg shadow-lg overflow-hidden">
+            <div className="relative w-full pb-[56.25%] h-0">
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/cE1lrOSyKqc?si=q6R13JAs0sh0z4x9"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p className="p-2 text-base md:text-xl text-neutral-300 max-w-lg mx-auto text-justify">
+              Welcome to the{" "}
+              <span className="text-red-500">
+                Alcohols, Phenols, and Ethers
+              </span>{" "}
+              chapter for Class 12. In this video, we'll explore their
+              structures, properties, preparation methods, and reactions. Learn
+              the importance of these compounds in chemistry and everyday life,
+              as they play a vital role in industrial and biological processes.
+            </p>
+          </div>
+          <div className="max-w-lg p-4 mx-auto md:mx-4 lg:mx-4 rounded-lg shadow-lg overflow-hidden">
+            <div className="relative w-full pb-[56.25%] h-0">
+              <iframe
+                width="560"
+                height="315"
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/KRgkzx2F4Hw?si=jZt9uOQlOy80MHzX"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p className="p-2 text-base md:text-xl text-neutral-300 max-w-lg mx-auto text-justify">
+              In a ,
+              <span className="text-red-500">C—O bond-breaking reaction</span>{" "}
+              the bond between carbon and oxygen atoms in a molecule is cleaved,
+              resulting in the formation of new products. This reaction
+              typically involves breaking a covalent bond, which requires energy
+              input. Such reactions are fundamental in organic chemistry,
+              influencing reaction mechanisms and product formation.
+            </p>
+          </div>
+          <div className="max-w-lg p-4 mx-auto md:mx-4 lg:mx-4 rounded-lg shadow-lg overflow-hidden">
+            <div className="relative w-full pb-[56.25%] h-0">
+              <iframe
+                width="560"
+                height="315"
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/EcLhupwS1ao?si=duWzelT00zTanVHY"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <p className="p-2 text-base md:text-xl text-neutral-300 max-w-lg mx-auto text-justify">
+              <span className="text-red-500">Esterification</span> is a chemical
+              reaction between a carboxylic acid and an alcohol, producing an
+              ester and water. This process, typically catalyzed by an acid,
+              involves the condensation of the acid and alcohol molecules. It's
+              widely used in making fragrances, flavors, and pharmaceuticals due
+              to its ability to produce aromatic esters.
+            </p>
+          </div>
         </div>
       </div>
     </ProtectedRoute>
