@@ -27,8 +27,8 @@ function Navbar({ className }: { className?: string }) {
      
     <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
   <circle cx="25" cy="25" r="5" fill="blue" />
-  <circle cx="25" cy="25" r="15" fill="none" stroke="gray" stroke-width="1" />
-  <circle cx="25" cy="25" r="24" fill="none" stroke="gray" stroke-width="1" />
+  <circle cx="25" cy="25" r="15" fill="none" stroke="gray" strokeWidth="1" />
+  <circle cx="25" cy="25" r="24" fill="none" stroke="gray" strokeWidth="1" />
   
   <circle cx="40" cy="25" r="3" fill="red" />
   <circle cx="10" cy="25" r="3" fill="red" />
