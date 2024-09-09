@@ -20,7 +20,7 @@ function EndSec() {
       <h2 className="uppercase font-serif font-extrabold text-center">
     <span className="text-red-500">
       Login
-    </span> to access exclusive resources.
+    </span> For Demo Lectures.
   </h2>
       <BackgroundBeams />
     </div>
