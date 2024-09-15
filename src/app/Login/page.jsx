@@ -113,7 +113,7 @@ function Page() {
           <div className="flex items-center justify-center text-sm mt-5">
             <p>New here?</p>
             <Link href="/Sign-Up">
-              <p className="underline cursor-pointer ml-1">Register</p>
+              <p className="text-purple-500 underline cursor-pointer ml-1">Register</p>
             </Link>
           </div>
         </form>
