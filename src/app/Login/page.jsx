@@ -14,7 +14,10 @@ function Page() {
     e.preventDefault();
     setError(""); // Clear any previous error messages
     if (email === "" || password === "") {
-      setError("Please fill all the fields");
+      setTimeout(()=>{
+        setError("Please fill all the fields");
+      },3000)
+      
       return;
     }
     try {
@@ -29,9 +32,7 @@ function Page() {
       if (res.error) {
         setError("Invalid Credentials");
       } else {
-        
         router.replace("/dashboard"); // Redirect to dashboard on successful login
-
       }
     } catch (error) {
       console.log(error);
@@ -42,12 +43,11 @@ function Page() {
  async function signInWithGoogle(){
     try {
       const res = await signIn("google", { redirect: false, callbackUrl: "/dashboard" });
-      console.log("Google sign-in response:", res.error); // Log the response
-
+      console.log("Google sign-in response:", res.error); 
       if (res.error) {
         setError("Failed to sign in with Google");
       } else {
-        console.log("Google sign-in successful, redirecting to home...");
+        
         router.replace("/dashboard"); // Redirect to home after successful Google sign-in
       }
     } catch (error) {
