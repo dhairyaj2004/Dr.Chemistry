@@ -1,6 +1,20 @@
-import React from 'react'
-
+"use client"
+import React from 'react';
+import emailjs from "emailjs-com";
 export default function Contact() {
+    const sendEmail = (e) => {
+        e.preventDefault();
+      
+        emailjs.sendForm('service_c8togfs', 'template_4u8tlpr', e.target, 'h1sBwZu91mHbGz_3u')
+          .then((result) => {
+            console.log(result.text);
+            alert("Message sent successfully!");
+          }, (error) => {
+            console.log(error.text);
+            alert("Failed to send message, try again later.");
+          });
+      };
+      
     return (
         <div className="relative flex items-top justify-center sm:items-center mt-16 md:mt-0 lg:mt-0 bg-gradient-to-b from-black/15 to-gray-900 min-h-screen">
             <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
@@ -87,7 +101,7 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        <form className="p-6 flex flex-col justify-center">
+                        <form onSubmit={sendEmail} className="p-6 flex flex-col justify-center">
                             <div className="flex flex-col">
                                 <label for="name" className="hidden">
                                     Full Name
@@ -119,15 +133,15 @@ export default function Contact() {
                                     Message
                                 </label>
                                 <textarea
-                                    type="tel"
-                                    name="tel"
-                                    id="tel"
+                                    type="message"
+                                    name="message"
+                                    id="message"
                                     placeholder="Message"
                                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
                                 />
                             </div>
 
-                            <button
+                            <button 
                                 type="submit"
                                 className="md:w-full bg-purple-600 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-purple-700 transition ease-in-out duration-300"
                             >
