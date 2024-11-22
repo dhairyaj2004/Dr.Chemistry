@@ -2,6 +2,7 @@
 import { useSession, signOut } from "next-auth/react";
 import ProtectedRoute from "@/components/protectedRoute.js";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 const Dashboard = () => {
   const { data: session, status } = useSession();
@@ -72,14 +73,16 @@ const Dashboard = () => {
   }, []); // Ensure useEffect dependencies are correct
 
   if (status === "loading") {
-    <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-zinc-900">
-      <div className="bg-black p-8 rounded-md shadow-md flex">
-        <p className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-100"></p>{" "}
-        <div className="mt-3 ml-3">Wait for a While</div>
+    return (
+      <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-zinc-900">
+        <div className="bg-black p-8 rounded-md shadow-md flex">
+          <p className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-100"></p>
+          <div className="mt-3 ml-3">Wait for a While</div>
+        </div>
       </div>
-    </div>;
+    );
   }
-
+  
   if (!session) {
     return (
       <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-zinc-900">
@@ -116,7 +119,7 @@ const Dashboard = () => {
             {/* Sample course cards */}
             <div className="relative mt-12 ml-10 flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
               <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl shadow-lg">
-                <img
+                <Image
                   src="https://dme2wmiz2suov.cloudfront.net/User(3471047)/CourseBundles(34585)/2309841-Blue_And_White_Modern_Website_Development_Services_Facebook_Post_(YouTube_Thumbnail)-6.png"
                   alt="Organic Chemistry Image"
                   className="object-cover w-full h-full"
@@ -139,7 +142,7 @@ const Dashboard = () => {
             </div>
             <div className="relative mt-12 ml-10 flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
               <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl shadow-lg">
-                <img
+                <Image
                   src="https://dme2wmiz2suov.cloudfront.net/User(3471047)/CourseBundles(34580)/2309835-Blue_And_White_Modern_Website_Development_Services_Facebook_Post_(YouTube_Thumbnail)-5.png"
                   alt="Inorganic Chemistry Image"
                   className="object-cover w-full h-full"
@@ -162,7 +165,7 @@ const Dashboard = () => {
             </div>
             <div className="relative mt-12 ml-10 flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
               <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl shadow-lg">
-                <img
+                <Image
                   src="https://i.ytimg.com/vi/A1sX5FdeIYk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBi0jv2TpJkG8F7CyKQEjizGputUg"
                   alt="General Chemistry Image"
                   className="object-cover w-full h-full"
@@ -274,7 +277,7 @@ const Dashboard = () => {
               <span className="text-red-500">
                 Alcohols, Phenols, and Ethers
               </span>{" "}
-              chapter for Class 12. In this video, we'll explore their
+              chapter for Class 12. In this video, we will explore their
               structures, properties, preparation methods, and reactions. Learn
               the importance of these compounds in chemistry and everyday life,
               as they play a vital role in industrial and biological processes.
@@ -322,7 +325,7 @@ const Dashboard = () => {
               <span className="text-red-500">Esterification</span> is a chemical
               reaction between a carboxylic acid and an alcohol, producing an
               ester and water. This process, typically catalyzed by an acid,
-              involves the condensation of the acid and alcohol molecules. It's
+              involves the condensation of the acid and alcohol molecules. It&apos;s
               widely used in making fragrances, flavors, and pharmaceuticals due
               to its ability to produce aromatic esters.
             </p>

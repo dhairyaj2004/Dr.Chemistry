@@ -1,6 +1,7 @@
-"use-client";
+"use client"; 
 import React, { useState, useRef, useEffect } from "react";
 import { LayoutGrid } from "@/components/ui/layout-grid";
+
 function page() {
   const SkeletonOne = () => {
     return (
@@ -29,6 +30,7 @@ function page() {
       </div>
     );
   };
+
   const SkeletonThree = () => {
     return (
       <div>
@@ -38,12 +40,13 @@ function page() {
           A ball and stick model of a cellulose molecule. Cellulose is a
           long-chain carbohydrate polymer consisting of cells of glucose. It
           forms the cell walls of green plants and, whilst minimally digestable
-          in the human gut, it forms an important part of the diet as "dietary
-          fiber".
+          in the human gut, it forms an important part of the diet as &quot;dietary
+          fiber&quot;.
         </p>
       </div>
     );
   };
+
   const SkeletonFour = () => {
     return (
       <div>
@@ -60,6 +63,7 @@ function page() {
       </div>
     );
   };
+
   const SkeletonFive = () => {
     return (
       <div>
@@ -67,12 +71,13 @@ function page() {
         <p className="font-normal text-base text-white"></p>
         <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
           Glucose is a simple sugar, a vital energy source for living organisms.
-          It's a carbohydrate, commonly found in foods like fruits and honey,
+          It&apos;s a carbohydrate, commonly found in foods like fruits and honey,
           and plays a crucial role in cellular respiration.
         </p>
       </div>
     );
   };
+
   const SkeletonSix = () => {
     return (
       <div>
@@ -86,6 +91,7 @@ function page() {
       </div>
     );
   };
+
   const SkeletonSeven = () => {
     return (
       <div>
@@ -93,12 +99,13 @@ function page() {
         <p className="font-normal text-base text-white"></p>
         <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
           Benzene is an aromatic hydrocarbon with a ring of six carbon atoms.
-          It's a colorless liquid, used as a solvent and precursor in various
+          It&apos;s a colorless liquid, used as a solvent and precursor in various
           industries.
         </p>
       </div>
     );
   };
+
   const SkeletonEight = () => {
     return (
       <div>
@@ -112,6 +119,7 @@ function page() {
       </div>
     );
   };
+
   const SkeletonNine = () => {
     return (
       <div>
@@ -125,6 +133,7 @@ function page() {
       </div>
     );
   };
+
   const cards = [
     {
       id: 1,
@@ -185,11 +194,12 @@ function page() {
     {
       id: 9,
       content: <SkeletonNine />,
-      className: "md:col-span-2",
+      className: "col-span-1",
       thumbnail:
-        "https://media.istockphoto.com/id/1437146514/photo/molecule-or-atom-abstract-molecular-structure-for-science-or-medical-background-3d.jpg?s=2048x2048&w=is&k=20&c=GSWrGP9tOA925U1NwtNYwmbmjcmUUAw0E5uq5PXDJyw=",
+        "https://cdn1.byjus.com/wp-content/uploads/2020/09/Water-Molecule.png",
     },
   ];
+
   return (
     <div className="mt-14 py-20 w-full h-screen overflow-y-auto bg-gradient-to-b from-gray-950 to-gray-900">
       <section className="text-center text-teal-400 uppercase ">
