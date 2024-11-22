@@ -8,7 +8,7 @@ export async function POST(request) {
     const paymentIntent = await stripe.paymentIntents.create({
       amount: amount,
       currency: "inr",
-      automatic_payment_methods: { enabled: true },// Stripe automatically determines and enables the best payment methods based on factors like the currency, the payment method types available in the region, and the customer's device and preferences.
+      automatic_payment_methods: { enabled: true }, // Stripe automatically determines and enables the best payment methods based on factors like the currency, the payment method types available in the region, and the customer's device and preferences.
     });
 
     return NextResponse.json({ clientSecret: paymentIntent.client_secret });

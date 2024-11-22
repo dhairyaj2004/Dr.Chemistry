@@ -11,6 +11,9 @@ export async function POST(request) {
     return NextResponse.json({ user });
   } catch (error) {
     console.log(error);
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+    return NextResponse.json(
+      { error: "Internal Server Error" },
+      { status: 500 }
+    );
   }
 }

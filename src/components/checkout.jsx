@@ -1,6 +1,10 @@
-'use client';
+"use client";
 import React, { useEffect, useState } from "react";
-import { useStripe, useElements, PaymentElement } from "@stripe/react-stripe-js";
+import {
+  useStripe,
+  useElements,
+  PaymentElement,
+} from "@stripe/react-stripe-js";
 import convertToSubcurrency from "../utils/convertToSubcurrency";
 
 const CheckoutPage = ({ amount }) => {
@@ -27,7 +31,7 @@ const CheckoutPage = ({ amount }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    
+
     if (!stripe || !elements) {
       setLoading(false);
       return;
@@ -70,7 +74,10 @@ const CheckoutPage = ({ amount }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto p-8 bg-white rounded-md shadow-md mt-10">
+    <form
+      onSubmit={handleSubmit}
+      className="max-w-md mx-auto p-8 bg-white rounded-md shadow-md mt-10"
+    >
       {clientSecret && <PaymentElement />}
       {errorMessage && <div className="text-red-500 mt-2">{errorMessage}</div>}
       <button
