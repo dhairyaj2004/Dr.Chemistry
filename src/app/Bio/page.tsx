@@ -1,6 +1,8 @@
-"use-client";
+"use client";
+
 import Link from "next/link";
-function page() {
+
+function Page() {
   return (
     <div className="flex flex-col min-h-screen justify-center items-center bg-gradient-to-b from-gray-950 to-gray-900">
       <div className="flex flex-col md:flex-row items-center justify-center py-20 mt-12 px-5">
@@ -12,17 +14,13 @@ function page() {
           className="md:w-1/2"
         />
         <div className="text-center md:text-left mt-5 md:ml-5">
-          <h1 className="font-extrabold text-xl md:text-2xl text-teal-600">
-            HERO COURSE-BIOCHEMISTRY
-          </h1>
-          <h2 className="font-semibold md:text-xl mt-5 text-red-300">
-            Let's Crack the Exams Together
-          </h2>
+          <h1 className="font-extrabold text-xl md:text-2xl text-teal-600">HERO COURSE-BIOCHEMISTRY</h1>
+          <h2 className="font-semibold md:text-xl mt-5 text-red-300">Let&#39;s Crack the Exams Together</h2>
           <h3 className="font-semibold md:text-xl mt-5 text-red-200">
-            Live Lectures • Live Tutorials • Competitive exam's practice{" "}
+            Live Lectures • Live Tutorials • Competitive exam&#39;s practice
           </h3>
           <h3 className="font-semibold md:text-xl mt-5 text-red-200">
-            5k+ students • Lifetime valid • Notes & Material included.{" "}
+            5k+ students • Lifetime valid • Notes &amp; Material included.
           </h3>
           <div className="flex justify-center">
             <Link href="/payment">
@@ -35,62 +33,50 @@ function page() {
       </div>
       <div className="flex flex-col items-center text-left w-full px-5">
         <div className="text-red-200 px-12 font-semibold text-xl flex flex-col gap-5 text-left">
-          <p>✅ Notes & Material included</p>
+          <p>✅ Notes &amp; Material included</p>
           <p>✅ Beginner to Advance Level</p>
           <p>✅ Money back guarantee</p>
           <p>✅ Lifetime validity</p>
         </div>
       </div>
       <div className="max-w-2xl mx-5 mt-10 px-5 py-8 shadow-lg rounded-lg">
-        <h2 className="text-3xl font-bold text-center text-teal-600 mb-6 uppercase">
-          BioChemistry Index
-        </h2>
+        <h2 className="text-3xl font-bold text-center text-teal-600 mb-6 uppercase">BioChemistry Index</h2>
         <div className="space-y-4 text-lg text-red-100">
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl ">
+          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">
             1. Introduction to Biochemistry
           </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl ">
+          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">
             2. Biomolecules: Carbohydrates
           </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl ">
+          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">
             3. Biomolecules: Lipids
           </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl ">
+          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">
             4. Biomolecules: Proteins
           </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl ">
+          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">
             5. Biomolecules: Nucleic Acids
           </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl ">
+          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">
             6. Enzymes and Enzyme Kinetics
           </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl ">
-            7. Metabolism: Overview
-          </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl ">
+          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">7. Metabolism: Overview</p>
+          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">
             8. Glycolysis and Gluconeogenesis
           </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl ">
+          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">
             9. Citric Acid Cycle (Krebs Cycle)
           </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl ">
+          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">
             10. Oxidative Phosphorylation and Electron Transport Chain
           </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl ">
+          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">
             11. Pentose Phosphate Pathway
           </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl ">
-            12. Lipid Metabolism
-          </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl ">
-            13. Protein Metabolism
-          </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl ">
-            14. Nucleotide Metabolism
-          </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl ">
-            15. Regulation of Metabolism
-          </p>
+          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">12. Lipid Metabolism</p>
+          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">13. Protein Metabolism</p>
+          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">14. Nucleotide Metabolism</p>
+          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">15. Regulation of Metabolism</p>
         </div>
       </div>
       <div className="relative custom:relative mt-5 font-semibold md:fixed bottom-5 right-5 flex items-center bg-white p-4 shadow-lg rounded-full ">
@@ -105,4 +91,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

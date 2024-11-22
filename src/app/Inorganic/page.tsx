@@ -1,6 +1,7 @@
-"use-client";
+"use client";
 import Link from "next/link";
-function page() {
+
+function Page() {
   return (
     <div className="flex flex-col min-h-screen justify-center items-center bg-gradient-to-b from-gray-950 to-gray-900">
       <div className="flex flex-col md:flex-row items-center justify-center py-20 mt-12 px-5">
@@ -16,13 +17,13 @@ function page() {
             HERO COURSE-INORGANIC CHEMISTRY
           </h1>
           <h2 className="font-semibold md:text-xl mt-5 text-red-300">
-            Let's Crack the Exams Together
+            Let&apos;s Crack the Exams Together
           </h2>
           <h3 className="font-semibold md:text-xl mt-5 text-red-200">
-            Live Lectures • Live Tutorials • Competitive exam's practice{" "}
+            Live Lectures • Live Tutorials • Competitive exam&apos;s practice{" "}
           </h3>
           <h3 className="font-semibold md:text-xl mt-5 text-red-200">
-            5k+ students • Lifetime valid • Notes & Material included.{" "}
+            5k+ students • Lifetime valid • Notes &amp; Material included.{" "}
           </h3>
           <div className="flex justify-center">
             <Link href="/payment">
@@ -35,7 +36,7 @@ function page() {
       </div>
       <div className="flex flex-col items-center text-left w-full px-5">
         <div className="text-red-200 px-12 font-semibold text-xl flex flex-col gap-5 text-left">
-          <p>✅ Notes & Material included</p>
+          <p>✅ Notes &amp; Material included</p>
           <p>✅ Beginner to Advance Level</p>
           <p>✅ Money back guarantee</p>
           <p>✅ Lifetime validity</p>
@@ -105,4 +106,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

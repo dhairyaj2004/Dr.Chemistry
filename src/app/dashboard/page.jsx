@@ -30,8 +30,9 @@ const Dashboard = () => {
   const handleDelete = async (id) => {
     try {
       let descision = confirm(
-        "Sure? After deleting thread will no longer accessible to anyone."
+        "Sure? After deleting thread will no longer accessible to anyone.&apos;"
       );
+      
       if (descision) {
         const response = await fetch(`/api/users/threads/${id}`, {
           method: "DELETE",
@@ -87,6 +88,7 @@ const Dashboard = () => {
           <div className="mt-3 ml-3">
             Wait for a While, Otherwise Login again
           </div>
+
         </div>
       </div>
     );

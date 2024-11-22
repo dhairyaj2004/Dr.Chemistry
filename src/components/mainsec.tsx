@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Link from "next/link";
 import { Spotlight } from "./ui/Spotlight";
@@ -47,12 +46,12 @@ function MainSec() {
           </div>
           <TypewriterEffect className="mt-9" words={words} />
           <p className="mt-8 px-2 text-base md:text-xl text-neutral-300 max-w-lg mx-auto text-justify">
-            "Welcome to our comprehensive chemistry website, your gateway to
-            exploring the diverse realms of this fascinating science. From the
-            intricate world of organic compounds to the fundamental principles
-            of physical chemistry, embark on a journey through the vast spectrum
-            of chemical disciplines. Discover, learn, and delve into the wonders
-            of chemistry with us."
+            &quot;Welcome to our comprehensive chemistry website, your gateway
+            to exploring the diverse realms of this fascinating science. From
+            the intricate world of organic compounds to the fundamental
+            principles of physical chemistry, embark on a journey through the
+            vast spectrum of chemical disciplines. Discover, learn, and delve
+            into the wonders of chemistry with us.&quot;
           </p>
 
           <div className="md:flex md:gap-7 lg:flex lg:gap-10 flex flex-col gap-5 items-center sm:flex-row sm:justify-center sm:gap-5 mt-10">

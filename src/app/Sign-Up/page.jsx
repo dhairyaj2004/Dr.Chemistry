@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-function page() {
+function Page() {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -133,4 +133,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

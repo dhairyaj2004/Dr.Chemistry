@@ -1,4 +1,5 @@
 "use client";
+
 export default function PaymentSuccess({ searchParams: { amount } }) {
   return (
     <main className="flex items-center justify-center min-h-screen">
@@ -8,7 +9,7 @@ export default function PaymentSuccess({ searchParams: { amount } }) {
             Congratulations!
           </h1>
           <h2 className="text-xl md:text-2xl lg:text-2xl text-gray-300">
-            You've successfully bought the course for just
+            You&apos;ve successfully bought the course for just
           </h2>
 
           <div className="p-4 rounded-md bg-gradient-to-r from-purple-500 to-blue-500 text-white mt-5 text-4xl font-bold shadow-lg transform transition duration-500 hover:scale-105">
