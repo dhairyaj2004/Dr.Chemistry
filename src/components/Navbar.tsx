@@ -14,7 +14,7 @@ function Navbar({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "fixed w-full top-0 left-0 bg-gradient-to-r from-transparent to-gray-900 text-xl shadow-2xl z-50 font-serif font-semibold",
+        "fixed w-full top-0 left-0 bg-gradient-to-r from-transparent to-gray-900 text-xl shadow-2xl z-50 font-serif font-semibold backdrop-blur-sm",
         className
       )}
     >
@@ -34,7 +34,7 @@ function Navbar({ className }: { className?: string }) {
                   cy="25"
                   r="15"
                   fill="none"
-                  stroke="gray"
+                  stroke="white"
                   strokeWidth="1"
                 />
                 <circle
@@ -42,7 +42,7 @@ function Navbar({ className }: { className?: string }) {
                   cy="25"
                   r="24"
                   fill="none"
-                  stroke="gray"
+                  stroke="white"
                   strokeWidth="1"
                 />
 
