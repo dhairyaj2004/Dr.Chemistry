@@ -102,7 +102,7 @@ function Navbar({ className }: { className?: string }) {
         </div>
       </div>
 
-      {/* Mobile menu (hamburger dropdown) */}
+      
       {isOpen && (
         <div className="md:hidden absolute top-16 left-0 w-full bg-gray-900 flex flex-col space-y-4 p-4">
           <Link href="/">
