@@ -19,10 +19,10 @@ function MainSec2() {
   return (
     <div className="px-8 py-12 bg-gray-900">
       <div className="">
-        <h1 className="mt-8 text-center text-teal-600 font-semibold tracking-wide text-2xl md:text-3xl lg:text-3xl">
+        <h1 className="mt-8 font-serif text-center text-teal-600 font-semibold tracking-wide text-2xl md:text-3xl lg:text-3xl">
           HERO COURSES
         </h1>
-        <h2 className="mt-8 text-3xl leading-8 font-extrabold tracking-tight text-red-300 sm:text-4xl text-center">
+        <h2 className="mt-8 text-3xl font-serif leading-8 font-extrabold tracking-tight text-red-300 sm:text-4xl text-center">
           LEARN WITH THE BEST
         </h2>
       </div>
