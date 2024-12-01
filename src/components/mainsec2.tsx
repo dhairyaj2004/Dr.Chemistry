@@ -1,6 +1,7 @@
 "use client";
 import cardData from "@/data/cards_data.json";
 import { BackgroundGradient } from "./ui/background-gradient";
+import Link from "next/link";
 interface Field {
   id: number;
   name: string;
@@ -37,19 +38,19 @@ function MainSec2() {
                 className="mt-4 rounded-2xl justify-center"
               />
               <p className="mt-6 ml-4 text-left">{field.description}</p>
-              <a
+              <Link
                 href={field.pageUrl}
                 className="mt-4 inline-block text-teal-600 hover:underline"
               >
                 <button className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
                   VIEW MORE
                 </button>
-              </a>
+              </Link>
             </BackgroundGradient>
           </div>
         ))}
       </div>
-      <h1 className="mt-14 text-3xl leading-8 font-extrabold tracking-tight text-red-300 sm:text-4xl text-center">
+      <h1 className="mt-14 text-3xl font-serif leading-8 font-extrabold tracking-tight text-red-300 sm:text-4xl text-center">
         WHY CHOOSE US?
       </h1>
     </div>
