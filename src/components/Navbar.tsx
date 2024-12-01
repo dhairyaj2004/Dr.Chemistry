@@ -22,7 +22,7 @@ function Navbar({ className }: { className?: string }) {
         <div className="flex items-center">
           <Link href="/">
             <div className="flex items-center space-x-2">
-              <img src="./logo.png" alt="" width={50}/>
+              <img src="./logo.png" alt="" width={35}/>
 
               <h1 className="text-2xl">
                 <span className="text-red-500">Dr.</span>Chemistry
