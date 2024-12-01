@@ -51,7 +51,7 @@ function Navbar({ className }: { className?: string }) {
                 <circle cx="25" cy="10" r="3" fill="red" />
                 <circle cx="25" cy="40" r="3" fill="red" />
               </svg>
-            <img src="./logo.png" alt="" width={35} height={35}/>
+            <img src="/logo.png" alt="" width={35} height={35}/>
               <h1 className="text-2xl">
                 <span className="text-red-500">Dr.</span>Chemistry
               </h1>
