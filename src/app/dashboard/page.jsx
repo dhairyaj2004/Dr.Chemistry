@@ -116,10 +116,11 @@ const Dashboard = () => {
         </h2>
         <div className="flex justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center">
-            {/* Sample course cards */}
+            
             <div className="relative mt-12 ml-10 flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
               <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl shadow-lg">
-                <Image
+                {/* <Image */}
+                <img
                   src="https://dme2wmiz2suov.cloudfront.net/User(3471047)/CourseBundles(34585)/2309841-Blue_And_White_Modern_Website_Development_Services_Facebook_Post_(YouTube_Thumbnail)-6.png"
                   alt="Organic Chemistry Image"
                   className="object-cover w-full h-full"
@@ -142,8 +143,8 @@ const Dashboard = () => {
             </div>
             <div className="relative mt-12 ml-10 flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
               <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl shadow-lg">
-                <Image
-                  src="https://dme2wmiz2suov.cloudfront.net/User(3471047)/CourseBundles(34580)/2309835-Blue_And_White_Modern_Website_Development_Services_Facebook_Post_(YouTube_Thumbnail)-5.png"
+                {/* <Image */}
+                 <img src="https://dme2wmiz2suov.cloudfront.net/User(3471047)/CourseBundles(34580)/2309835-Blue_And_White_Modern_Website_Development_Services_Facebook_Post_(YouTube_Thumbnail)-5.png"
                   alt="Inorganic Chemistry Image"
                   className="object-cover w-full h-full"
                 />
@@ -165,7 +166,8 @@ const Dashboard = () => {
             </div>
             <div className="relative mt-12 ml-10 flex w-80 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
               <div className="relative mx-4 -mt-6 h-40 overflow-hidden rounded-xl shadow-lg">
-                <Image
+                {/* <Image */}
+                <img
                   src="https://i.ytimg.com/vi/A1sX5FdeIYk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBi0jv2TpJkG8F7CyKQEjizGputUg"
                   alt="General Chemistry Image"
                   className="object-cover w-full h-full"
