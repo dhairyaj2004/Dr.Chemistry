@@ -22,7 +22,35 @@ function Navbar({ className }: { className?: string }) {
         <div className="flex items-center">
           <Link href="/">
             <div className="flex items-center space-x-2">
-              <img src="./logo.png" alt="" width={35}/>
+              <svg
+                width="50"
+                height="50"
+                viewBox="0 0 50 50"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="25" cy="25" r="5" fill="blue" />
+                <circle
+                  cx="25"
+                  cy="25"
+                  r="15"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="1"
+                />
+                <circle
+                  cx="25"
+                  cy="25"
+                  r="24"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="1"
+                />
+
+                <circle cx="40" cy="25" r="3" fill="red" />
+                <circle cx="10" cy="25" r="3" fill="red" />
+                <circle cx="25" cy="10" r="3" fill="red" />
+                <circle cx="25" cy="40" r="3" fill="red" />
+              </svg>
 
               <h1 className="text-2xl">
                 <span className="text-red-500">Dr.</span>Chemistry
