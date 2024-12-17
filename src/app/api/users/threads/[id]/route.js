@@ -79,7 +79,6 @@ export async function DELETE(req) {
     // Extract the ID from the URL
     const id = req.url.split("/").pop();
 
-    // Find and update the thread
     const deletedThread = await Thread.findByIdAndDelete(id);
     if (!deletedThread) {
       return NextResponse.json({ error: "Thread not found" }, { status: 404 });
