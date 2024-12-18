@@ -36,7 +36,7 @@ function MainSec() {
           fill="white"
         />
         <div className="py-14 flex flex-col z-10 align-middle justify-center items-center">
-          <div className="sm:mt-10 md:mt-20 md:text-8xl sm:text-6xl text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-black/15 to-gray-900">
+          <div className="sm:mt-10 md:mt-20 md:text-8xl sm:text-6xl text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
             <span className="font-serif" style={{ color: "red" }}>
               Dr.{" "}
             </span>
