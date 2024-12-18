@@ -16,15 +16,15 @@ function MainSec() {
     },
     {
       text: "Mysteries",
-      className: "text-xl md:text-5xl text-blue-500",
+      className: "text-xl md:text-5xl text-blue-500 dark:text-blue-500",
     },
     {
       text: "of",
-      className: "text-xl md:text-5xl text-red-500",
+      className: "text-xl md:text-5xl text-red-500 dark:text-red-300",
     },
     {
       text: "Molecules.",
-      className: "text-xl md:text-5xl text-blue-500",
+      className: "text-xl md:text-5xl text-blue-500 dark:text-blue-500",
     },
   ];
 
@@ -58,7 +58,7 @@ function MainSec() {
             <Link href="/Images">
               <Button
                 borderRadius="1.75rem"
-                className="font-medium bg-black text-red-300 border-slate-800 font-weight-2 rounded-lg"
+                className="font-medium dark:bg-black text-black dark:text-red-300 border-neutral-200 dark:border-slate-800 font-weight-2 rounded-lg"
               >
                 Chemistry Gallery
               </Button>
@@ -66,7 +66,7 @@ function MainSec() {
             <Link href="/Videos">
               <Button
                 borderRadius="1.75rem"
-                className="font-medium bg-black text-red-300 border-slate-800 font-weight-2 rounded-lg"
+                className="font-medium dark:bg-black text-black dark:text-red-300 border-neutral-200 dark:border-slate-800 font-weight-2 rounded-lg"
               >
                 Chemistry Clips
               </Button>
@@ -74,7 +74,7 @@ function MainSec() {
             <Link href="/dashboard">
               <Button
                 borderRadius="1.75rem"
-                className="font-medium bg-black text-red-300 border-slate-800 rounded-lg"
+                className="font-medium dark:bg-black text-black dark:text-red-300 border-neutral-200 dark:border-slate-800 rounded-lg"
               >
                 Dashboard
               </Button>
