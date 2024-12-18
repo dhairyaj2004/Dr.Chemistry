@@ -16,15 +16,15 @@ function MainSec() {
     },
     {
       text: "Mysteries",
-      className: "text-xl md:text-5xl text-blue-500 dark:text-blue-500",
+      className: "text-xl md:text-5xl text-blue-500",
     },
     {
       text: "of",
-      className: "text-xl md:text-5xl text-red-500 dark:text-red-300",
+      className: "text-xl md:text-5xl text-red-500",
     },
     {
       text: "Molecules.",
-      className: "text-xl md:text-5xl text-blue-500 dark:text-blue-500",
+      className: "text-xl md:text-5xl text-blue-500",
     },
   ];
 
@@ -36,7 +36,7 @@ function MainSec() {
           fill="white"
         />
         <div className="py-14 flex flex-col z-10 align-middle justify-center items-center">
-          <div className="sm:mt-10 md:mt-20 md:text-8xl sm:text-6xl text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+          <div className="sm:mt-10 md:mt-20 md:text-8xl sm:text-6xl text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-black/15 to-gray-900">
             <span className="font-serif" style={{ color: "red" }}>
               Dr.{" "}
             </span>
@@ -58,7 +58,7 @@ function MainSec() {
             <Link href="/Images">
               <Button
                 borderRadius="1.75rem"
-                className="font-medium dark:bg-black text-black dark:text-red-300 border-neutral-200 dark:border-slate-800 font-weight-2 rounded-lg"
+                className="font-medium bg-black text-red-300 border-slate-800 font-weight-2 rounded-lg"
               >
                 Chemistry Gallery
               </Button>
@@ -66,7 +66,7 @@ function MainSec() {
             <Link href="/Videos">
               <Button
                 borderRadius="1.75rem"
-                className="font-medium dark:bg-black text-black dark:text-red-300 border-neutral-200 dark:border-slate-800 font-weight-2 rounded-lg"
+                className="font-medium bg-black text-red-300 border-slate-800 font-weight-2 rounded-lg"
               >
                 Chemistry Clips
               </Button>
@@ -74,7 +74,7 @@ function MainSec() {
             <Link href="/dashboard">
               <Button
                 borderRadius="1.75rem"
-                className="font-medium dark:bg-black text-black dark:text-red-300 border-neutral-200 dark:border-slate-800 rounded-lg"
+                className="font-medium bg-black text-red-300 border-slate-800 rounded-lg"
               >
                 Dashboard
               </Button>
