@@ -208,53 +208,56 @@ const Dashboard = () => {
               className="relative h-full ml-0 mr-0 sm:mr-10"
               key={thread._id}
             >
-              <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"></span>
-              <div className="relative h-full p-5 bg-white border-2 border-indigo-500 rounded-lg">
-                <div className="flex justify-between">
-                  <h3 className="my-2  text-xl font-bold text-indigo-500 uppercase">
-                    {thread.title}
-                  </h3>
-                  <div>
-                    <button onClick={() => handleDelete(thread._id)}>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth="2"
-                        stroke="currentColor"
-                        className="w-6 h-6 text-red-500 hover:text-red-700 cursor-pointer my-2 ml-3"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M6 18L18 6M6 6l12 12"
-                        />
-                      </svg>
-                    </button>
-                    <svg
-                      onClick={() => handleUpdate(thread._id)}
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      className="h-6 w-6 ml-3 cursor-pointer"
-                      fill="none"
-                      stroke="green"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="1.5"
-                        d="M21,12a1,1,0,0,0-1,1v6a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4h6a1,1,0,0,0,0-2H5A3,3,0,0,0,2,5V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V13A1,1,0,0,0,21,12ZM6,12.76V17a1,1,0,0,0,1,1h4.24a1,1,0,0,0,.71-.29l6.92-6.93h0L21.71,8a1,1,0,0,0,0-1.42L17.47,2.29a1,1,0,0,0-1.42,0L13.23,5.12h0L6.29,12.05A1,1,0,0,0,6,12.76ZM16.76,4.41l2.83,2.83L18.17,8.66,15.34,5.83ZM8,13.17l5.93-5.93,2.83,2.83L10.83,16H8Z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div className="flex justify-between">
-                  <p className="mb-2 -mt-6 text-sm font-bold text-gray-500 uppercase">
-                    {thread.topic}
-                  </p>
-                </div>
-                <p className="mb-2  text-gray-600">{thread.description}</p>
-              </div>
+              <div className="relative w-full h-full">
+  <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-gray-800 rounded-lg"></span>
+  <div className="relative h-full p-5 bg-gray-900 border-2 border-gray-700 rounded-lg">
+    <div className="flex justify-between">
+      <h3 className="my-2 text-xl font-bold text-indigo-400 uppercase">
+        {thread.title}
+      </h3>
+      <div className="flex items-center">
+        <button onClick={() => handleDelete(thread._id)}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="2"
+            stroke="currentColor"
+            className="w-6 h-6 text-red-400 hover:text-red-600 cursor-pointer my-2 ml-3"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+        <svg
+          onClick={() => handleUpdate(thread._id)}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          className="h-6 w-6 ml-3 cursor-pointer text-green-400 hover:text-green-600"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M21,12a1,1,0,0,0-1,1v6a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4h6a1,1,0,0,0,0-2H5A3,3,0,0,0,2,5V19a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V13A1,1,0,0,0,21,12ZM6,12.76V17a1,1,0,0,0,1,1h4.24a1,1,0,0,0,.71-.29l6.92-6.93h0L21.71,8a1,1,0,0,0,0-1.42L17.47,2.29a1,1,0,0,0-1.42,0L13.23,5.12h0L6.29,12.05A1,1,0,0,0,6,12.76ZM16.76,4.41l2.83,2.83L18.17,8.66,15.34,5.83ZM8,13.17l5.93-5.93,2.83,2.83L10.83,16H8Z"
+          />
+        </svg>
+      </div>
+    </div>
+    <div className="flex justify-between">
+      <p className="mb-2 text-sm font-bold text-gray-400 uppercase">
+        {thread.topic}
+      </p>
+    </div>
+    <p className="mb-2 mt-2 text-gray-300">{thread.description}</p>
+  </div>
+</div>
+
             </div>
           ))}
         </div>
