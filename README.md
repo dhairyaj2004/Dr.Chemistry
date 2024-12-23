@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Dr. Chemistry 🧪
 
-## Getting Started
+**Dr. Chemistry** is a web platform designed to make learning chemistry an engaging and interactive experience. Whether you're delving into organic, inorganic, or biochemistry, Dr. Chemistry provides comprehensive resources, collaborative tools, and exciting features to foster a deeper understanding of the subject.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features 🚀
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🌟 **Core Features**
+1. **Interactive Dashboard**:  
+   - Users can post and explore threads on various chemistry topics.
+   - Includes sections for threads and courses to promote active discussions.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Course Material**:  
+   - Covers **Organic Chemistry**, **Inorganic Chemistry**, and **Biochemistry**.
+   - Includes videos, tutorials, practice exams, and photos to aid learning.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. **User Authentication**:  
+   - Secure login/signup using **NextAuth** with Google login option.  
+   - User-specific dashboard ensures personalized access to threads.
 
-## Learn More
+4. **Protected Routes**:  
+   - Threads can only be updated or deleted by their owners, ensuring data integrity.
 
-To learn more about Next.js, take a look at the following resources:
+5. **Modern UI/UX**:  
+   - Built using **Acertinity UI**, **Framer Motion**, and **Tailwind CSS** for seamless and responsive design.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Tech Stack 🛠️
 
-## Deploy on Vercel
+### **Frontend**
+- [Next.js](https://nextjs.org/): React framework for a robust frontend.
+- [Acertinity UI](https://acertinity.com): For modern, stylish UI components.
+- [Tailwind CSS](https://tailwindcss.com/): Responsive and utility-first styling.
+- [Framer Motion](https://www.framer.com/motion/): Animations and transitions.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### **Backend**
+- [Next.js API Routes](https://nextjs.org/docs/api-routes/introduction): Server-side functionality.
+- [MongoDB Atlas](https://www.mongodb.com/atlas): Database to store threads and user information.
+- [NextAuth](https://next-auth.js.org/): Secure authentication with email and Google login.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### **Additional Libraries**
+- [bcrypt.js](https://github.com/dcodeIO/bcrypt.js): Secure password hashing.
+- [Stripe](https://stripe.com/): Payment gateway integration for premium course access.
+
+---
