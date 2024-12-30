@@ -1,4 +1,3 @@
-// import express from 'express'
 import connection from "../../../../../dbConnection/dbConnection";
 import Thread from "../../../../../models/threadModel";
 import { NextResponse } from "next/server";
@@ -6,11 +5,11 @@ import { getSession } from "next-auth/react";
 export async function POST(request) {
   try {
     await getSession(request);
-    const { title, desc, topic, ownerEmail} = await request.json();
-    // Connect to MongoDB
+    const { title, desc, topic, ownerEmail } = await request.json();
+
     await connection();
-    console.log(title, desc, topic, ownerEmail)
-    // Create thread in database
+    console.log(title, desc, topic, ownerEmail);
+
     const newThread = await Thread.create({ title, desc, topic, ownerEmail });
 
     return NextResponse.json(
@@ -27,9 +26,8 @@ export async function POST(request) {
 }
 export async function GET(request) {
   try {
-    await connection(); // Ensure MongoDB connection
+    await connection();
 
-    // Fetch all threads from MongoDB
     const threads = await Thread.find();
 
     return NextResponse.json({ threads });
@@ -41,17 +39,13 @@ export async function GET(request) {
     );
   }
 }
-// Adjust this import path as needed
 
 export async function PUT(req) {
   try {
-    // Extract the ID from the URL
     const id = req.url.split("/").pop();
 
-    // Parse the request body
     const { title, desc, topic } = await req.json();
 
-    // Find and update the thread
     const updatedThread = await Thread.findByIdAndUpdate(
       id,
       { title, description: desc, topic },
@@ -76,7 +70,6 @@ export async function PUT(req) {
 }
 export async function DELETE(req) {
   try {
-    // Extract the ID from the URL
     const id = req.url.split("/").pop();
 
     const deletedThread = await Thread.findByIdAndDelete(id);

@@ -14,23 +14,19 @@ function Page() {
   const handleCreate = async (e) => {
     e.preventDefault();
 
-    // Ensure all required fields are filled
     if (!title || !desc || !topic) {
       setError("Please fill all the fields");
       return;
     }
 
-    // Ensure user is authenticated
     if (status !== "authenticated") {
       setError("You must be logged in to create a thread.");
       return;
     }
 
     try {
-      // Retrieve the logged-in user's email
       const ownerEmail = session?.user?.email;
 
-      // Make POST request to the API
       const res = await fetch("/api/users/threads/1", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -38,16 +34,12 @@ function Page() {
       });
 
       if (res.ok) {
-        // Reset form fields and navigate to dashboard upon success
         setTitle("");
         setDesc("");
         setTopic("");
-        setError(""); // Clear any previous errors
-        const dt=await res.json();
-        console.log(dt)
-        // router.push("/dashboard");
+        setError("");
+        router.push("/dashboard");
       } else {
-        // Handle errors from the API
         const errorData = await res.json();
         setError(errorData.error || "Creation failed");
       }
@@ -57,8 +49,17 @@ function Page() {
     }
   };
 
-  if (status === "loading") {
-    return <p>Loading...</p>;
+  if (status==="loading") {
+    return (
+      <div>
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-zinc-900">
+          <div className="bg-black p-8 rounded-md shadow-md flex">
+            <p className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-100"></p>{" "}
+            <div className="mt-3 ml-3">Wait for a While</div>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -66,7 +67,6 @@ function Page() {
       <div className="max-w-md w-full mx-auto p-8 bg-gradient-to-r from-transparent to-gray-900 rounded-md shadow-md border border-purple-500">
         <h2 className="text-2xl font-bold text-gray-100 mb-6">Create Thread</h2>
         <form onSubmit={handleCreate}>
-          {/* Thread Title */}
           <div className="mb-4">
             <label
               htmlFor="title"
@@ -86,13 +86,12 @@ function Page() {
             />
           </div>
 
-          {/* Description */}
           <div className="mb-4">
             <label
               htmlFor="description"
               className="block text-sm font-medium text-gray-100"
             >
-              Description 
+              Description
             </label>
             <textarea
               id="description"
@@ -106,7 +105,6 @@ function Page() {
             />
           </div>
 
-          {/* Radio Buttons for Topics */}
           <div className="mb-6">
             <label className="block text-sm font-medium text-gray-100 mb-2">
               Select Topic
@@ -167,7 +165,7 @@ function Page() {
             </div>
           </div>
           {error && <p className="text-center text-red-500 mb-2">{error}</p>}
-          {/* Submit Button */}
+
           <button
             type="submit"
             className="w-full bg-purple-500 text-white py-2 px-4 rounded-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
