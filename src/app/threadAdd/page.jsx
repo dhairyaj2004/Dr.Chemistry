@@ -1,36 +1,53 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 
 function Page() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [topic, setTopic] = useState("");
   const [error, setError] = useState("");
+  const { data: session, status } = useSession();
   const router = useRouter();
 
   const handleCreate = async (e) => {
     e.preventDefault();
-    window.location.href = "/dashboard";
-    // Check if any required field is empty
-    if (!title || !desc) {
+
+    // Ensure all required fields are filled
+    if (!title || !desc || !topic) {
       setError("Please fill all the fields");
       return;
     }
 
+    // Ensure user is authenticated
+    if (status !== "authenticated") {
+      setError("You must be logged in to create a thread.");
+      return;
+    }
+
     try {
-      const res = await fetch("/api/users/threads/[id]", {
+      // Retrieve the logged-in user's email
+      const ownerEmail = session?.user?.email;
+
+      // Make POST request to the API
+      const res = await fetch("/api/users/threads/1", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ title, desc, topic }),
+        body: JSON.stringify({ title, desc, topic, ownerEmail }),
       });
 
       if (res.ok) {
+        // Reset form fields and navigate to dashboard upon success
         setTitle("");
         setDesc("");
         setTopic("");
-        router.push("/threadAdd");
+        setError(""); // Clear any previous errors
+        const dt=await res.json();
+        console.log(dt)
+        // router.push("/dashboard");
       } else {
+        // Handle errors from the API
         const errorData = await res.json();
         setError(errorData.error || "Creation failed");
       }
@@ -39,6 +56,10 @@ function Page() {
       setError("Failed to create thread. Please try again.");
     }
   };
+
+  if (status === "loading") {
+    return <p>Loading...</p>;
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-transparent to-gray-900">
@@ -71,7 +92,7 @@ function Page() {
               htmlFor="description"
               className="block text-sm font-medium text-gray-100"
             >
-              Description
+              Description 
             </label>
             <textarea
               id="description"

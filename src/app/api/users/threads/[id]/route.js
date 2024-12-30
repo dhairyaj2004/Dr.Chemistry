@@ -2,16 +2,16 @@
 import connection from "../../../../../dbConnection/dbConnection";
 import Thread from "../../../../../models/threadModel";
 import { NextResponse } from "next/server";
-
+import { getSession } from "next-auth/react";
 export async function POST(request) {
   try {
-    const { title, desc, topic } = await request.json();
-
+    await getSession(request);
+    const { title, desc, topic, ownerEmail} = await request.json();
     // Connect to MongoDB
     await connection();
-
+    console.log(title, desc, topic, ownerEmail)
     // Create thread in database
-    const newThread = await Thread.create({ title, description: desc, topic });
+    const newThread = await Thread.create({ title, desc, topic, ownerEmail });
 
     return NextResponse.json(
       { message: "Thread Created Successfully", data: newThread },

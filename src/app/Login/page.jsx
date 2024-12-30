@@ -42,6 +42,7 @@ function Page() {
 
   async function signInWithGoogle() {
     try {
+      // console.log("Hello")
       const res = await signIn("google", {
         redirect: false,
         callbackUrl: "/dashboard",
@@ -50,7 +51,9 @@ function Page() {
       if (res.error) {
         setError("Failed to sign in with Google");
       } else {
-        router.replace("/dashboard"); // Redirect to home after successful Google sign-in
+        console.log(res)
+        localStorage.setItem("Credential",JSON.stringify(res))
+        console.log("***") // Redirect to home after successful Google sign-in
       }
     } catch (error) {
       setTimeout(() => {

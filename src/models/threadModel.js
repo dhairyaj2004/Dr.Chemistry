@@ -1,26 +1,23 @@
 import mongoose from "mongoose";
 
-const threadSchema = mongoose.Schema({
+const threadSchema = new mongoose.Schema({
   title: {
     type: String,
-    required: [true, "Please fill up the field"],
+    required: true,
   },
-  description: {
+  desc: {
     type: String,
-    required: [true, "Please fill up the field"],
+    required: true,
   },
   topic: {
     type: String,
     enum: ["Organic Chemistry", "Inorganic Chemistry", "Biochemistry"],
     required: true,
   },
-  // userId: {
-  //   type: mongoose.Schema.Types.ObjectId,
-  //   ref: 'users',
-  //   required: true,
-  // }, // Store the user ID
+  ownerEmail: {
+    type: String,
+    required: true,
+  },
 });
-const Thread =
-  mongoose.models.threads || mongoose.model("threads", threadSchema);
 
-module.exports = Thread;
+export default mongoose.models.Thread || mongoose.model("Thread", threadSchema);
