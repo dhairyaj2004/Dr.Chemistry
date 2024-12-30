@@ -48,7 +48,7 @@ export async function PUT(req) {
 
     const updatedThread = await Thread.findByIdAndUpdate(
       id,
-      { title, description: desc, topic },
+      { title, desc, topic },
       { new: true }
     );
 
