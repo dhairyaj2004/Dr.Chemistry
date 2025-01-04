@@ -44,53 +44,53 @@ function Page() {
         </div>
       </div>
       <div className="max-w-2xl mx-5 mt-10 px-5 py-8 shadow-lg rounded-lg">
-        <h2 className="text-3xl font-bold font-serif text-center text-red-300 mb-6 uppercase">
+        <h2 className="text-xl md:text-3xl lg:text-3xl font-bold font-serif text-center text-red-300 mb-6 uppercase">
           Biochemistry Index
         </h2>
         <div className="space-y-4 text-lg text-red-100">
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             1. Introduction to Biochemistry
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             2. Biomolecules: Carbohydrates
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             3. Biomolecules: Lipids
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             4. Biomolecules: Proteins
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             5. Biomolecules: Nucleic Acids
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             6. Enzymes and Enzyme Kinetics
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             7. Metabolism: Overview
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             8. Glycolysis and Gluconeogenesis
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             9. Citric Acid Cycle (Krebs Cycle)
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             10. Oxidative Phosphorylation and Electron Transport Chain
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             11. Pentose Phosphate Pathway
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             12. Lipid Metabolism
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             13. Protein Metabolism
-          </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          </p> 
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             14. Nucleotide Metabolism
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             15. Regulation of Metabolism
           </p>
         </div>

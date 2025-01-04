@@ -43,54 +43,54 @@ function Page() {
         </div>
       </div>
       <div className="max-w-2xl mx-5 mt-10 px-5 py-8 shadow-lg rounded-lg">
-        <h2 className="text-3xl font-bold font-serif text-center text-red-300 mb-6 uppercase">
+        <h2 className="text-xl md:text-3xl lg:text-3xl  font-bold font-serif text-center text-red-300 mb-6 uppercase">
           Inorganic Chemistry Index
         </h2>
 
         <div className="space-y-4 text-lg text-red-100">
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             1. Introduction to Inorganic Chemistry
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             2. Atomic Structure and Periodicity
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             3. Chemical Bonding
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             4. Coordination Chemistry
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             5. Main Group Chemistry
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             6. Transition Metal Chemistry
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             7. Solid State Chemistry
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             8. Chemical Thermodynamics
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             9. Chemical Kinetics
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             10. Acids and Bases
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             11. Redox Reactions
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             12. Electrochemistry
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             13. Nuclear Chemistry
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             14. Analytical Techniques in Inorganic Chemistry
           </p>
-          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-md md:text-2xl lg:text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             15. Applications of Inorganic Chemistry
           </p>
         </div>
