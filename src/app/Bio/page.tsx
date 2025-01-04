@@ -14,8 +14,12 @@ function Page() {
           className="md:w-1/2"
         />
         <div className="text-center md:text-left mt-5 md:ml-5">
-          <h1 className="font-extrabold text-xl md:text-2xl text-teal-600">HERO COURSE-BIOCHEMISTRY</h1>
-          <h2 className="font-semibold md:text-xl mt-5 text-red-300">Let&#39;s Crack the Exams Together</h2>
+          <h1 className="font-extrabold text-xl md:text-2xl text-teal-600">
+            HERO COURSE-BIOCHEMISTRY
+          </h1>
+          <h2 className="font-semibold md:text-xl mt-5 text-red-300">
+            Let&#39;s Crack the Exams Together
+          </h2>
           <h3 className="font-semibold md:text-xl mt-5 text-red-200">
             Live Lectures • Live Tutorials • Competitive exam&#39;s practice
           </h3>
@@ -40,45 +44,58 @@ function Page() {
         </div>
       </div>
       <div className="max-w-2xl mx-5 mt-10 px-5 py-8 shadow-lg rounded-lg">
-        <h2 className="text-3xl font-bold text-center text-teal-600 mb-6 uppercase">BioChemistry Index</h2>
+        <h2 className="text-3xl font-bold font-serif text-center text-red-300 mb-6 uppercase">
+          Biochemistry Index
+        </h2>
         <div className="space-y-4 text-lg text-red-100">
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             1. Introduction to Biochemistry
           </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             2. Biomolecules: Carbohydrates
           </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             3. Biomolecules: Lipids
           </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             4. Biomolecules: Proteins
           </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             5. Biomolecules: Nucleic Acids
           </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             6. Enzymes and Enzyme Kinetics
           </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">7. Metabolism: Overview</p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+            7. Metabolism: Overview
+          </p>
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             8. Glycolysis and Gluconeogenesis
           </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             9. Citric Acid Cycle (Krebs Cycle)
           </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             10. Oxidative Phosphorylation and Electron Transport Chain
           </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
             11. Pentose Phosphate Pathway
           </p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">12. Lipid Metabolism</p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">13. Protein Metabolism</p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">14. Nucleotide Metabolism</p>
-          <p className="min-w-screen bg-zinc-800 shadow-lg rounded-lg text-left text-2xl">15. Regulation of Metabolism</p>
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+            12. Lipid Metabolism
+          </p>
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+            13. Protein Metabolism
+          </p>
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+            14. Nucleotide Metabolism
+          </p>
+          <p className="min-w-screen bg-teal-800 shadow-lg rounded-lg text-left text-2xl px-6 py-4 transition-transform duration-300 hover:scale-105 hover:bg-teal-700 cursor-pointer">
+            15. Regulation of Metabolism
+          </p>
         </div>
       </div>
+
       <div className="relative custom:relative mt-5 font-semibold md:fixed bottom-5 right-5 flex items-center bg-white p-4 shadow-lg rounded-full ">
         <p className="mr-2 text-teal-600">Need help? Chat with us</p>
         <span>
