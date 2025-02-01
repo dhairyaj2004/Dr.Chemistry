@@ -70,7 +70,7 @@ const ReviewSec = ({ autoplay = false, pauseOnHover = false, images = [] }) => {
 
   return (
     <div className="w-full">
-      <h2 className="mb-1 text-3xl font-extrabold leading-tight text-center text-red-300 font-serif uppercase">
+      <h2 className="mb-1 mt-8 text-3xl font-extrabold leading-tight text-center text-red-300 font-serif uppercase">
         Success Stories
       </h2>
       <p className="mb-12 text-lg text-center text-teal-300">
