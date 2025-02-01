@@ -68,7 +68,14 @@ const reviewSec= ({ autoplay = false, pauseOnHover = false, images = [] }) => {
   }, [autoplay]);
 
   return (
-    <div className="relative h-[600px] w-full overflow-hidden"> 
+    <div className="w-full">
+      <h2 className="mb-1 text-3xl font-extrabold leading-tight text-center text-red-300  font-serif uppercase">
+          Success Stories
+        </h2>
+        <p className="mb-12 text-lg text-center text-teal-300">
+          Here is a few of the honest feedbacks of our this year Toppers.
+        </p>
+   <div className="relative h-[600px] w-full overflow-hidden"> 
       <div className="flex h-full items-center justify-center [perspective:1200px] [transform-style:preserve-3d]">
         <motion.div
           drag="x"
@@ -115,6 +122,7 @@ const reviewSec= ({ autoplay = false, pauseOnHover = false, images = [] }) => {
 
         </motion.div>
       </div>
+    </div>
     </div>
   );
 };
