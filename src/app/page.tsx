@@ -10,7 +10,7 @@ export default function Home() {
       <Mainsec />
       <Mainsec2 />
       <WhyChooseUs />
-      <ReviewSec />
+      <ReviewSec autoplay={true} pauseOnHover={true} />
       <Endsec />
       <Footer />
     </>

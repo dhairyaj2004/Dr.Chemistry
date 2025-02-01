@@ -1,154 +1,122 @@
-import React from "react";
+'use client'
+import { useEffect, useState } from "react";
+import { motion, useMotionValue, useAnimation, useTransform } from "framer-motion";
 
-function reviewSec() {
+const IMGS = [
+  {
+    profileImg: "https://img.freepik.com/premium-photo/young-man-is-holding-book-smiling_905085-17.jpg", // Replace with Aarav's profile image
+    name: "Aarav Sharma",
+    score: "98% in H.S.C. Board",
+    review:
+      "Excellent teaching technique, engaging and clear. Material is comprehensive and relevant. Teachers offer great support, always available to clarify doubts and encourage learning.",
+  },
+  {
+    profileImg: "https://cdn.pixabay.com/photo/2024/02/12/17/23/ai-generated-8569065_1280.jpg",
+    name: "Neha Verma",
+    score: "95% in H.S.C. Board",
+    review:
+      "The best learning experience! The teaching style makes complex topics easy to understand. Highly recommend for students looking to excel in chemistry!",
+  },
+  {
+    profileImg: "https://img.freepik.com/premium-photo/image-25-year-old-indian-man-that-is-smiling-camera_878783-7217.jpg",
+    name: "Rohan Patel",
+    score: "92% in H.S.C. Board",
+    review:
+      "The interactive approach and real-life applications of chemistry made learning fun and effective. I gained confidence in my subject knowledge!",
+  },
+  {
+    profileImg: "https://img.freepik.com/premium-photo/young-indian-college-girl-smiling_54391-7128.jpg",
+    name: "Ananya Desai",
+    score: "90% in H.S.C. Board",
+    review:
+      "Amazing teachers and top-quality study materials. The revision sessions helped a lot before my exams!",
+  },
+];
+
+
+const reviewSec= ({ autoplay = false, pauseOnHover = false, images = [] }) => {
+  images = images.length > 0 ? images : IMGS;
+
+  const [isScreenSizeSm, setIsScreenSizeSm] = useState(window.innerWidth <= 640);
+  useEffect(() => {
+    const handleResize = () => setIsScreenSizeSm(window.innerWidth <= 640);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Responsive 3D geometry adjustments
+  const cylinderWidth = isScreenSizeSm ? 1100 : 2200; // Increased width for larger screens
+  const faceCount = images.length;
+  const faceWidth = (cylinderWidth / faceCount) * 1.5;
+  const radius = cylinderWidth / (2 * Math.PI); // Larger radius on wider screens
+
+  const dragFactor = 0.05;
+  const rotation = useMotionValue(0);
+  const controls = useAnimation();
+  const transform = useTransform(rotation, (val) => `rotate3d(0,1,0,${val}deg)`);
+
+  const startInfiniteSpin = (startAngle) => {
+    controls.start({
+      rotateY: [startAngle, startAngle - 360],
+      transition: { duration: 20, ease: "linear", repeat: Infinity },
+    });
+  };
+
+  useEffect(() => {
+    if (autoplay) startInfiniteSpin(rotation.get());
+    else controls.stop();
+  }, [autoplay]);
+
   return (
-    <div className="bg-black">
-      <div className="container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 mt-5">
-        <h2 className="mb-1 text-3xl font-extrabold leading-tight text-center text-red-300  font-serif uppercase">
-          Success Stories
-        </h2>
-        <p className="mb-12 text-lg text-center text-teal-300">
-          Here is a few of the honest feedbacks of our this year Toppers.
-        </p>
-        <div className="w-full">
-          <div className="flex flex-col w-full mb-10 sm:flex-row">
-            <div className="w-full mb-10 sm:mb-0 sm:w-1/2">
-              <div className="relative h-full ml-0 mr-0 sm:mr-10">
-                <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"></span>
-                <div className="relative h-full p-5 bg-white border-2 border-indigo-500 rounded-lg">
-                  <div className="flex items-center -mt-1">
-                    <img
-                      src="https://img.freepik.com/premium-photo/young-man-is-holding-book-smiling_905085-17.jpg"
-                      alt="Profile Photo"
-                      className="w-14 h-14 rounded-full"
-                    />
-                    <h3 className="my-2 ml-3 text-xl font-bold text-gray-800">
-                      Aarav Sharma
-                    </h3>
-                  </div>
-                  <p className="my-2 ml-3 text-md font-bold text-indigo-500 uppercase">
-                    98% in H.S.C. Board
-                  </p>
-                  <p className="mb-2 text-gray-600">
-                    Excellent teaching technique, engaging and clear. Material
-                    is comprehensive and relevant. Teachers offer great support,
-                    always available to clarify doubts and encourage learning.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="w-full mb-10 sm:mb-0 sm:w-1/2">
-              <div className="relative h-full ml-0 mr-0 sm:mr-10">
-                <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"></span>
-                <div className="relative h-full p-5 bg-white border-2 border-indigo-500 rounded-lg">
-                  <div className="flex items-center -mt-1">
-                    <img
-                      src="https://cdn.pixabay.com/photo/2024/02/12/17/23/ai-generated-8569065_1280.jpg"
-                      alt="Profile Photo"
-                      className="w-14 h-14 rounded-full"
-                    />
-                    <h3 className="my-2 ml-3 text-xl font-bold text-gray-800">
-                      Diya Patel
-                    </h3>
-                  </div>
-                  <p className="my-2 ml-3 text-md font-bold text-indigo-500 uppercase">
-                    95% in H.S.C. Board
-                  </p>
-                  <p className="mb-2 text-gray-600">
-                    Innovative teaching methods make learning enjoyable. Study
-                    materials are extensive and well-organized. Teachers are
-                    supportive, providing guidance and feedback promptly to
-                    enhance understanding.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col w-full mb-5 sm:flex-row">
-            <div className="w-full mb-10 sm:mb-0 sm:w-1/2">
-              <div className="relative h-full ml-0 mr-0 sm:mr-10">
-                <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"></span>
-                <div className="relative h-full p-5 bg-white border-2 border-indigo-500 rounded-lg">
-                  <div className="flex items-center -mt-1">
-                    <img
-                      src="https://img.freepik.com/premium-photo/image-25-year-old-indian-man-that-is-smiling-camera_878783-7217.jpg"
-                      alt="Profile Photo"
-                      className="w-14 h-14 rounded-full"
-                    />
-                    <h3 className="my-2 ml-3 text-xl font-bold text-gray-800">
-                      Akshar Gaikwad
-                    </h3>
-                  </div>
-                  <p className="my-2 ml-3 text-md font-bold text-indigo-500 uppercase">
-                    92% in H.S.C. Board
-                  </p>
-                  <p className="mb-2 text-gray-600">
-                    Effective teaching techniques keep classes interactive and
-                    interesting. Study materials are well-curated and enhance
-                    learning. Teachers are supportive, approachable, and go the
-                    extra mile to help students succeed.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="w-full mb-10 sm:mb-0 sm:w-1/2">
-              <div className="relative h-full ml-0 mr-0 sm:mr-10">
-                <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"></span>
-                <div className="relative h-full p-5 bg-white border-2 border-indigo-500 rounded-lg">
-                  <div className="flex items-center -mt-1">
-                    <img
-                      src="https://img.freepik.com/premium-photo/young-man_948023-1221.jpg"
-                      alt="Profile Photo"
-                      className="w-14 h-14 rounded-full"
-                    />
-                    <h3 className="my-2 ml-3 text-xl font-bold text-gray-800">
-                      Vihaan Gupta
-                    </h3>
-                  </div>
-                  <p className="my-2 ml-3 text-md font-bold text-indigo-500 uppercase">
-                    91% in H.S.C. Board
-                  </p>
-                  <p className="mb-2 text-gray-600">
-                    Engaging teaching strategies boost comprehension. Study
-                    materials are detailed and aid in understanding concepts
-                    thoroughly. Teachers provide valuable support, ensuring
-                    students grasp challenging topics with confidence.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="w-full mb-10 sm:mb-0 sm:w-1/2">
-              <div className="relative h-full ml-0 mr-0 sm:mr-10">
-                <span className="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-indigo-500 rounded-lg"></span>
-                <div className="relative h-full p-5 bg-white border-2 border-indigo-500 rounded-lg">
-                  <div className="flex items-center -mt-1">
-                    <img
-                      src="https://img.freepik.com/premium-photo/young-indian-college-girl-smiling_54391-7128.jpg"
-                      alt="Profile Photo"
-                      className="w-14 h-14 rounded-full"
-                    />
-                    <h3 className="my-2 ml-3 text-xl font-bold text-gray-800">
-                      Nitya Joshi
-                    </h3>
-                  </div>
-                  <p className="my-2 ml-3 text-md font-bold text-indigo-500 uppercase">
-                    90% in H.S.C. Board
-                  </p>
-                  <p className="mb-2 text-gray-600">
-                    Dynamic teaching approach fosters active learning. Study
-                    materials are comprehensive and reinforce concepts
-                    effectively. Teachers offer exceptional support, responding
-                    promptly to queries and fostering a conducive learning
-                    environment.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div className="relative h-[600px] w-full overflow-hidden"> 
+      <div className="flex h-full items-center justify-center [perspective:1200px] [transform-style:preserve-3d]">
+        <motion.div
+          drag="x"
+          dragElastic={0}
+          onDrag={(e, info) => rotation.set(rotation.get() + info.offset.x * dragFactor)}
+          onDragEnd={(e, info) => {
+            rotation.set(rotation.get() + info.velocity.x * dragFactor);
+            if (autoplay) startInfiniteSpin(rotation.get());
+          }}
+          onMouseEnter={() => autoplay && pauseOnHover && controls.stop()}
+          onMouseLeave={() => autoplay && pauseOnHover && startInfiniteSpin(rotation.get())}
+          animate={controls}
+          style={{ transform, rotateY: rotation, width: cylinderWidth, transformStyle: "preserve-3d" }}
+          className="flex min-h-[250px] cursor-grab items-center justify-center"
+        >
+          {images.map((student, i) => (
+  <div
+    key={i}
+    className="absolute flex flex-col items-center justify-center [backface-visibility:hidden]"
+    style={{
+      width: `${faceWidth}px`,
+      transform: `rotateY(${(360 / faceCount) * i}deg) translateZ(${radius}px)`,
+    }}
+  >
+  
+    <div className="relative flex flex-col items-center gap-4 p-6 bg-slate-900 backdrop-blur-md border border-white rounded-2xl shadow-lg max-w-[280px] sm:max-w-[320px]">
+   
+      <img
+        src={student.profileImg}
+        alt={student.name}
+        className="h-[80px] w-[80px] rounded-full border-[3px] border-white object-cover shadow-md"
+      />
+
+      <h3 className="text-lg font-semibold text-white">{student.name}</h3>
+      <p className="text-sm text-gray-300">{student.score}</p>
+
+      <p className="text-center text-white text-sm sm:text-base px-3">
+        "{student.review}"
+      </p>
+
+    </div>
+  </div>
+))}
+
+        </motion.div>
       </div>
     </div>
   );
-}
+};
 
 export default reviewSec;
