@@ -74,7 +74,7 @@ const ReviewSec = ({ autoplay = false, pauseOnHover = false, images = [] }) => {
         Success Stories
       </h2>
       <p className="mb-12 text-lg text-center text-teal-300">
-        Here are a few of the honest feedbacks from our this year's Toppers.
+        Here are a few of the honest feedbacks from our this batch toppers.
       </p>
       <div className="relative h-[600px] w-full overflow-hidden">
         <div className="flex h-full items-center justify-center [perspective:1200px] [transform-style:preserve-3d]">
