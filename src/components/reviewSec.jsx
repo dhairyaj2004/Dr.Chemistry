@@ -34,7 +34,7 @@ const IMGS = [
 ];
 
 
-const reviewSec= ({ autoplay = false, pauseOnHover = false, images = [] }) => {
+const ReviewSec= ({ autoplay = false, pauseOnHover = false, images = [] }) => {
   images = images.length > 0 ? images : IMGS;
 
   const [isScreenSizeSm, setIsScreenSizeSm] = useState(window.innerWidth <= 640);
@@ -113,7 +113,7 @@ const reviewSec= ({ autoplay = false, pauseOnHover = false, images = [] }) => {
       <p className="text-sm text-gray-300">{student.score}</p>
 
       <p className="text-center text-white text-sm sm:text-base px-3">
-        "{student.review}"
+        {student.review}
       </p>
 
     </div>
@@ -127,4 +127,4 @@ const reviewSec= ({ autoplay = false, pauseOnHover = false, images = [] }) => {
   );
 };
 
-export default reviewSec;
+export default ReviewSec;
